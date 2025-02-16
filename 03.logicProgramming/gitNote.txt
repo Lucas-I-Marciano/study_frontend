@@ -1,0 +1,9 @@
+commit: Save a checkpoint of your code
+brach: Timeline of your code. You can create more than one timeline
+merge: Put two timelines together
+github: service to store your remote repository
+git commit -m: "-m" stands for "message"
+origin: default alias to https://github.com/Lucas-I-Marciano/study_frontend.git, in this case
+
+
+sequence of git codes in this folder
