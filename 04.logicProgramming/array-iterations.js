@@ -54,3 +54,27 @@ console.log(sortedUsers);
 
 const sortedUsers2 = users2.sort((a, b) => a.id - b.id); // Because this subtraction will return negative or positive numbers
 console.log(sortedUsers2);
+
+//reduce -> Reduce an array to an object (Array, number...)
+const numbersToSum = [10, 20, 30, 40, 50];
+const sum = numbersToSum.reduce((accumulator, value) => {
+  return accumulator + value;
+}, 0);
+console.log(sum);
+
+const products = [
+  { name: "banana", category: "fruta" },
+  { name: "alface", category: "verdura" },
+  { name: "maçã", category: "fruta" },
+  { name: "cenoura", category: "legume" },
+  { name: "pêssego", category: "fruta" },
+  { name: "couve", category: "verdura" },
+];
+const categories = products.reduce(
+  (acc, objProduct) => {
+    acc[objProduct["category"]]++;
+    return acc;
+  },
+  { fruta: 0, verdura: 0, legume: 0 }
+);
+console.log(categories);
