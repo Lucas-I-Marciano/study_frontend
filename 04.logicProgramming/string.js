@@ -10,3 +10,7 @@ const kiwi = fruits.slice(15, 99);
 const kiwi2 = fruits.substring(15);
 console.log(kiwi); // Kiwi
 console.log(kiwi2); // Kiwi
+
+// substr
+const banana = fruits.substr(7, 6);
+console.log(banana); // Banana
