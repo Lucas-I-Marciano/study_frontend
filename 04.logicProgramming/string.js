@@ -27,3 +27,10 @@ console.log(newText2); // Please visit MICROSOFT!
 text = "Please visit MICROSOFT microsoft!";
 const newTextRegex = text.replace(/Microsoft/gi, "my site"); // i for case insensitive, g for all occurrences
 console.log(newTextRegex); // Please visit my site my site!
+
+// padStart
+let textToPad = "5";
+const paddedStart = textToPad.padStart(4, 0);
+const paddedEnd = textToPad.padEnd(4, 0);
+console.log(paddedStart); // "0005"
+console.log(paddedEnd); // "5000"
