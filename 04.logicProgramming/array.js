@@ -12,3 +12,7 @@ console.log(boysAndGirls.join(", ")); // "joao, tiago, sidemar, graciele"
 // push
 boysAndGirls.push("Lucas");
 console.log(boysAndGirls); // [ 'joao', 'tiago', 'sidemar', 'graciele', 'Lucas' ]
+
+// pop
+boysAndGirls.pop();
+console.log(boysAndGirls); // [ 'joao', 'tiago', 'sidemar', 'graciele' ] -> Remove last item
