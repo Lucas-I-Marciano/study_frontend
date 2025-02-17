@@ -70,11 +70,10 @@ const products = [
   { name: "pêssego", category: "fruta" },
   { name: "couve", category: "verdura" },
 ];
-const categories = products.reduce(
-  (acc, objProduct) => {
-    acc[objProduct["category"]]++;
-    return acc;
-  },
-  { fruta: 0, verdura: 0, legume: 0 }
-);
-console.log(categories);
+const categories = products.reduce((acc, objProduct) => {
+  return {
+    ...acc,
+    [objProduct["category"]]: (acc[objProduct["category"]] || 0) + 1,
+  };
+}, {});
+console.log(categories); // { fruta: 3, verdura: 2, legume: 1 }
