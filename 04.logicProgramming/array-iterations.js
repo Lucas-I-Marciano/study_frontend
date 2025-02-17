@@ -42,3 +42,12 @@ const isAnyoneEstudante = users2.some(
   (objectData) => objectData.role === "Estudante"
 );
 console.log(isAnyoneEstudante); // true
+
+//sort
+const sortedUsers = users2.sort((a, b) => {
+  // a = one element, b = second element
+  if (a.id < b.id) return -1; // Do not do anything
+  if (a.id > b.id) return 1; // Change position of a and b
+  if (a.id === b.id) return 0;
+});
+console.log(sortedUsers);
