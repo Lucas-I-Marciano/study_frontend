@@ -30,4 +30,7 @@ console.log(sliced); // [ 'Orange', 'Apple', 'Mango' ]
 fruits.splice(1, 0, "Watermellon", "Kiwi");
 console.log(fruits); // [ 'Banana', 'Watermellon', 'Kiwi', 'Orange', 'Apple', 'Mango' ]
 fruits.splice(0, 2);
-console.log(fruits); // [ 'Banana', 'Watermellon', 'Kiwi', 'Orange', 'Apple', 'Mango' ]
+console.log(fruits); // [ 'Kiwi', 'Orange', 'Apple', 'Mango' ]
+
+// reverse
+console.log(fruits.reverse()); // [ 'Mango', 'Apple', 'Orange', 'Kiwi' ]
