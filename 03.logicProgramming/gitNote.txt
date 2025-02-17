@@ -1,0 +1,15 @@
+commit: Save a checkpoint of your code
+brach: Timeline of your code. You can create more than one timeline
+merge: Put two timelines together
+github: service to store your remote repository
+git commit -m: "-m" stands for "message"
+origin: default alias to https://github.com/Lucas-I-Marciano/study_frontend.git, in this case
+
+git init: Start a local repository
+git status: Status of files compared with remote repository
+git add: Add files to be commited
+git commit: Create a checkpoint version [-m to message]
+git push: Send commits to remote repository [git push <origin> <branch-name>]
+git checkout: Change to another branch [-b to change creating another]
+git fetch: Sync remote and local - Just tell me, don't do anything
+git pull: Pull changes from remote to local
