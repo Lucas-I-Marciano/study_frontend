@@ -14,3 +14,16 @@ console.log(kiwi2); // Kiwi
 // substr
 const banana = fruits.substr(7, 6);
 console.log(banana); // Banana
+
+// Methods to modify string content
+// replace
+let text = "Please visit Microsoft!";
+const newText = text.replace("Microsoft", "my site");
+console.log(newText); // Please visit my site!
+text = "Please visit MICROSOFT!";
+const newText2 = text.replace("Microsoft", "my site");
+console.log(newText2); // Please visit MICROSOFT!
+
+text = "Please visit MICROSOFT microsoft!";
+const newTextRegex = text.replace(/Microsoft/gi, "my site"); // i for case insensitive, g for all occurrences
+console.log(newTextRegex); // Please visit my site my site!
