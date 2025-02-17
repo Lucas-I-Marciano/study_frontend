@@ -26,3 +26,9 @@ const student = users2.filter((objectData) => {
   return objectData.role === "Estudante";
 });
 console.log(student); // List just with "Estudante" role
+
+//filter
+const found = users2.find((objectData) => {
+  return objectData.role === "Estudante";
+});
+console.log(found); // { name: 'Juca', role: 'Estudante', id: 10 } -> Just one single register
