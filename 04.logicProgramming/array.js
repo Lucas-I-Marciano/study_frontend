@@ -5,3 +5,6 @@ const girls = ["graciele"];
 
 const boysAndGirls = boys.concat(girls);
 console.log(boysAndGirls); // [ 'joao', 'tiago', 'sidemar', 'graciele' ]
+
+// join
+console.log(boysAndGirls.join(", ")); // "joao, tiago, sidemar, graciele"
