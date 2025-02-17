@@ -1,0 +1,7 @@
+// concat
+
+const boys = ["joao", "tiago", "sidemar"];
+const girls = ["graciele"];
+
+const boysAndGirls = boys.concat(girls);
+console.log(boysAndGirls); // [ 'joao', 'tiago', 'sidemar', 'graciele' ]
