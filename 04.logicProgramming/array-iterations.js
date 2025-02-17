@@ -51,3 +51,6 @@ const sortedUsers = users2.sort((a, b) => {
   if (a.id === b.id) return 0;
 });
 console.log(sortedUsers);
+
+const sortedUsers2 = users2.sort((a, b) => a.id - b.id); // Because this subtraction will return negative or positive numbers
+console.log(sortedUsers2);
