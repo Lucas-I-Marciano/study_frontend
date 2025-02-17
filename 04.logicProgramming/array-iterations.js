@@ -32,3 +32,13 @@ const found = users2.find((objectData) => {
   return objectData.role === "Estudante";
 });
 console.log(found); // { name: 'Juca', role: 'Estudante', id: 10 } -> Just one single register
+
+//every & any
+const isEveryoneEstudante = users2.every(
+  (objectData) => objectData.role === "Estudante"
+);
+console.log(isEveryoneEstudante); // false
+const isAnyoneEstudante = users2.some(
+  (objectData) => objectData.role === "Estudante"
+);
+console.log(isAnyoneEstudante); // true
