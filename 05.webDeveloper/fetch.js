@@ -15,6 +15,7 @@ const body = {
 const response2 = await fetch("https://jsonplaceholder.typicode.com/posts", {
   method: "post",
   body: JSON.stringify(body),
+  headers: { "Content-Type": "application/json" },
 });
 const data2 = await response2.json();
 console.log(data2); // { id: 101 }
