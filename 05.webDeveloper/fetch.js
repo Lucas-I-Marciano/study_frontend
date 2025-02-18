@@ -31,3 +31,13 @@ const responseToUpdate = await fetch(
 );
 const dataUpdated = await responseToUpdate.json();
 console.log(dataUpdated);
+
+// delete id:11
+const responseToDelete = await fetch(
+  "https://jsonplaceholder.typicode.com/posts/11",
+  {
+    method: "delete",
+  }
+);
+const deletedData = await responseToDelete.json();
+console.log(deletedData); // {}
