@@ -16,10 +16,6 @@ const p2 = () => {
   });
 };
 
-p1()
-  .then((data) => {
-    console.log(data);
-    p2().then((data2) => console.log(data2));
-  })
-  .catch((error) => console.error(error))
-  .finally(() => console.log("End of p1!")); // this first promise was resolved! || End of p1! || this second promise was resolved!
+Promise.all([p1(), p2()]).then((data) => {
+  return console.log(data);
+}); // ['this first promise was resolved!', 'this second promise was resolved!']
