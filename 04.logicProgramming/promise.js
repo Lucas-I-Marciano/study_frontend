@@ -31,3 +31,15 @@ async function asyncFunction() {
 }
 
 asyncFunction(); // this first promise was resolved!
+
+const formatNumber = (value) => {
+  try {
+    if (typeof value != "number") {
+      throw new Error("Entrada deve ser um número");
+    }
+    return value.toFixed(2);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+formatNumber("20.00091982"); // Entrada deve ser um número
