@@ -19,3 +19,15 @@ const response2 = await fetch("https://jsonplaceholder.typicode.com/posts", {
 });
 const data2 = await response2.json();
 console.log(data2); // { id: 101 }
+
+//update post id:1
+const responseToUpdate = await fetch(
+  "https://jsonplaceholder.typicode.com/posts/1",
+  {
+    method: "put",
+    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/json" },
+  }
+);
+const dataUpdated = await responseToUpdate.json();
+console.log(dataUpdated);
