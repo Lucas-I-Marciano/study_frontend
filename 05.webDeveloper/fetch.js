@@ -24,7 +24,7 @@ console.log(data2); // { id: 101 }
 const responseToUpdate = await fetch(
   "https://jsonplaceholder.typicode.com/posts/1",
   {
-    method: "put",
+    method: "patch",
     body: JSON.stringify(body),
     headers: { "Content-Type": "application/json" },
   }
