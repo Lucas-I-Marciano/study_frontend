@@ -4,8 +4,8 @@ const p1 = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("this promise was resolved");
-    }, 3000);
+    }, 1500);
   });
 };
 
-console.log(p1()); // Promise { <pending> }
+p1().then((data) => console.log(data)); // this promise was resolved
