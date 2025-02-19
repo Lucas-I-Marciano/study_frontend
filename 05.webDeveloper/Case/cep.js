@@ -11,15 +11,15 @@ const getInfoCep = async (cep) => {
     const response = await (
       await fetch(`https://viacep.com.br/ws/${cep}/json/`)
     ).json();
+    return response;
   } catch (error) {
     console.error(`Erro ao consultar CEP: ${cep}`);
   }
-  return response;
 };
 
 const saveToJson = (data, fileName) => {
-  const parsedJson = JSON.stringify(date);
-  fs.writeFile(fileName, parsedJson);
+  const parsedJsonCorrect = JSON.stringify(data);
+  fs.writeFile(fileName, parsedJsonCorrect, (err) => err && console.error(err));
 };
 
 const main = async () => {
@@ -32,7 +32,6 @@ const main = async () => {
     localidade,
     uf,
   };
-
   saveToJson(data, "localidade.json");
 };
 
