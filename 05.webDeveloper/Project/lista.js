@@ -28,7 +28,11 @@ const getArrayOfObjects = (linesWithoutHeader, headers) => {
   linesWithoutHeader.forEach((value, index) => {
     const aux = {};
     value.forEach((value2, index2) => {
-      aux[headers[index2]] = value2;
+      if (headers[index2] === "preco") {
+        aux[headers[index2]] = `R$${value2}`.replace(".", ",");
+      } else {
+        aux[headers[index2]] = value2;
+      }
     });
     toReturn.push(aux);
   });
