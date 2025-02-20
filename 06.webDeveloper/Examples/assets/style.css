@@ -33,7 +33,7 @@ h1 {
   background-color: aqua;
   height: 100px;
   width: 100px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 /* Using CSS nesting: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting */
@@ -43,4 +43,11 @@ h1 {
 
 .blue-square * {
   text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center;
 }
