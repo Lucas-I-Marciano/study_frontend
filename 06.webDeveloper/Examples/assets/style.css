@@ -45,6 +45,11 @@ h1 {
   text-align: center;
 }
 
+.black-square {
+  background-color: black;
+  order: 1;
+}
+
 .container {
   display: flex;
   justify-content: center;
