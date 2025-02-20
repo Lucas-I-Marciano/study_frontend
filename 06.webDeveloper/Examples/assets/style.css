@@ -1,0 +1,7 @@
+h1 {
+  color: red;
+  font-size: 50px;
+  font-weight: lighter;
+  line-height: 100px;
+  /* line-height sets the height of a line box in horizontal writing modes */
+}
