@@ -6,3 +6,9 @@ HTML: standard markup language for Web pages
     <a href="https://google.com">:  Opening tag
     Site do Google:                 Content
     </a>:                           Ending tag
+
+CSS: Language we use to style an HTML document
+h1{color:#424242;}
+    h1:         Selector
+    color:      Property
+    #424242:    value
