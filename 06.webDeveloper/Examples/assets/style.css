@@ -19,3 +19,15 @@ h1 {
   /* height: auto; is default. Best practice -> Set only width */
   display: none;
 }
+
+.blue-square {
+  background-color: aqua;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Using CSS nesting: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting */
+.blue-square p {
+  color: red;
+}
