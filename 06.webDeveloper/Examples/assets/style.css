@@ -57,3 +57,17 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.container-2 {
+  display: flex;
+}
+
+#left {
+  flex-grow: 1;
+}
+#center {
+  flex-grow: 2;
+}
+#right {
+  flex-grow: 1;
+}
