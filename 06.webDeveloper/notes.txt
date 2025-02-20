@@ -1,0 +1,8 @@
+HTML: standard markup language for Web pages
+<a href="https://google.com">Site do Google</a>
+    a:                              Element identifier
+    href:                           Attribute of tag 'a'
+    "https://google.com":           value
+    <a href="https://google.com">:  Opening tag
+    Site do Google:                 Content
+    </a>:                           Ending tag
