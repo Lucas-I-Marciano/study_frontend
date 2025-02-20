@@ -5,3 +5,9 @@ h1 {
   line-height: 100px;
   /* line-height sets the height of a line box in horizontal writing modes */
 }
+
+#main-section {
+  border: 2px solid black;
+  background-color: antiquewhite;
+  padding: 20px;
+}
