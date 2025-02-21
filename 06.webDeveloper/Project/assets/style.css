@@ -76,6 +76,50 @@
   margin-bottom: 69px;
 }
 
+.woman-cellphone {
+  display: flex;
+  align-items: center;
+}
+
+.woman-cellphone-container {
+  width: 50%;
+}
+
+.woman-cellphone-container-title {
+  font-size: 36px;
+  line-height: 46px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.woman-cellphone-container-main-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+.woman-cellphone-container-scratchs {
+  display: flex;
+}
+
+.woman-cellphone-container-scratch-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 14px 0 6px 0;
+}
+
+.woman-cellphone-container-scratch-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.woman-cellphone-container-image {
+  padding: 110px 0;
+}
+
 /* General CSS */
 
 .link {
