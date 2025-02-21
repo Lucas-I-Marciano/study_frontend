@@ -8,10 +8,16 @@
 
 .header {
   height: 100vh;
-  background-image: url("./images/designer_1.png");
+  background-image: url("./images/header_image.png");
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: right top;
+  background-size: 1024px;
   display: flex;
+}
+
+.header-container {
+  max-width: 1100px;
+  width: 100%;
 }
 
 .container {
@@ -27,8 +33,10 @@
   align-items: center;
   position: fixed;
   top: 0;
-  width: 50%;
+  width: 100%;
   padding-top: 20px;
+  max-width: inherit;
+  width: inherit;
 }
 
 .navbar-link {
