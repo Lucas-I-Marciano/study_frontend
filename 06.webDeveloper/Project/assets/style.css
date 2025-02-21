@@ -11,6 +11,14 @@
   background-image: url("./images/designer_1.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  display: flex;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  /* margin: auto; important to centralize */
+  margin: auto;
 }
 
 .navbar {
@@ -19,7 +27,7 @@
   align-items: center;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 50%;
 }
 
 .navbar-link {
@@ -39,6 +47,24 @@
   font-size: 26px;
   line-height: 38px;
   color: #37447e;
+}
+
+.header-content {
+  width: 50%;
+}
+
+.header-content-title {
+  font-size: 50px;
+  line-height: 66px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.header-content-paragraph {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 69px;
 }
 
 /* General CSS */
@@ -66,4 +92,8 @@
   border: 2px solid #091133;
   background-color: transparent;
   color: #091133;
+}
+
+.margin-right__30 {
+  margin-right: 30px;
 }
