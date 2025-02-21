@@ -97,6 +97,7 @@
   line-height: 26px;
   font-weight: 400;
   margin-bottom: 80px;
+  color: #6f7cb2;
 }
 
 .woman-cellphone-container-scratchs {
@@ -114,6 +115,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+  color: #5d6970;
 }
 
 .woman-cellphone-container-image {
@@ -149,4 +151,12 @@
 
 .margin-right__30 {
   margin-right: 30px;
+}
+
+.margin-right__15 {
+  margin-right: 15px;
+}
+
+.margin-left__15 {
+  margin-left: 15px;
 }
