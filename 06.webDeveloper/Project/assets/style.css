@@ -85,13 +85,6 @@
   width: 50%;
 }
 
-.woman-cellphone-container-title {
-  font-size: 36px;
-  line-height: 46px;
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-
 .woman-cellphone-container-main-text {
   font-size: 16px;
   line-height: 26px;
@@ -159,4 +152,11 @@
 
 .margin-left__15 {
   margin-left: 15px;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 46px;
+  margin-bottom: 16px;
+  font-weight: 500;
 }
