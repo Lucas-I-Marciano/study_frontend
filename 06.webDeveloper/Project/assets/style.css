@@ -145,6 +145,23 @@
   margin-bottom: 40px;
 }
 
+.section-price-background {
+  background-image: url("./images/bg_rectangle.png");
+  background-size: 100% auto;
+}
+
+.section-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 238px 0px;
+}
+
+.section-price .section-main-text {
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+
 /* General CSS */
 
 .link {
