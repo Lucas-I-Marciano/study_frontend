@@ -83,6 +83,11 @@
 
 .woman-cellphone-container {
   width: 50%;
+  margin-right: 15px;
+}
+
+.woman-cellphone-container .section-main-text__margin-bottom {
+  margin-bottom: 80px;
 }
 
 .woman-cellphone-container-scratchs {
@@ -103,16 +108,29 @@
   color: #5d6970;
 }
 
-.woman-cellphone-container-image {
+.woman-cellphone .woman-cellphone-image {
   padding: 110px 0;
+  margin-left: 15px;
 }
 
-.woman-flower .woman-flower-content {
+.woman-flower-content {
   margin-left: 77px;
 }
 
-.woman-flower .woman-flower-image {
+.woman-flower-image {
   margin-right: 77px;
+}
+
+.social-media-image {
+  margin-right: 62px;
+}
+
+.social-media-content {
+  margin-left: 62px;
+}
+
+.social-media-content .section-main-text {
+  margin-bottom: 40px;
 }
 
 /* General CSS */
@@ -166,10 +184,6 @@
   line-height: 26px;
   font-weight: 400;
   color: #6f7cb2;
-}
-
-.section-main-text__margin-bottom {
-  margin-bottom: 80px;
 }
 
 .section-flex {
