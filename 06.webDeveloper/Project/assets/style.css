@@ -162,6 +162,29 @@
   margin-bottom: 36px;
 }
 
+.section-price-price {
+  font-size: 50px;
+  line-height: 66px;
+  font-weight: 500;
+  color: #222f65;
+}
+
+.section-price-price-description {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #37447e;
+  margin-bottom: 60px;
+}
+
+.section-price-price-description-2 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #5d6970;
+  margin-bottom: 10px;
+}
+
 /* General CSS */
 
 .link {
