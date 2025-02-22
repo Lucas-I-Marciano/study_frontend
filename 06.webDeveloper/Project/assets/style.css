@@ -107,6 +107,20 @@
   padding: 110px 0;
 }
 
+.woman-flower {
+  display: flex;
+  align-items: center;
+  padding: 122px 0;
+}
+
+.woman-flower .woman-flower-content {
+  margin-left: 77px;
+}
+
+.woman-flower .woman-flower-image {
+  margin-right: 77px;
+}
+
 /* General CSS */
 
 .link {
