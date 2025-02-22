@@ -133,6 +133,18 @@
   margin-bottom: 40px;
 }
 
+.mention-content {
+  margin-left: 86px;
+}
+
+.mention-image {
+  margin-right: 86px;
+}
+
+.mention-content .section-main-text {
+  margin-bottom: 40px;
+}
+
 /* General CSS */
 
 .link {
