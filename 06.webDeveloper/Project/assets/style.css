@@ -85,14 +85,6 @@
   width: 50%;
 }
 
-.woman-cellphone-container-main-text {
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 400;
-  margin-bottom: 80px;
-  color: #6f7cb2;
-}
-
 .woman-cellphone-container-scratchs {
   display: flex;
 }
@@ -159,4 +151,15 @@
   line-height: 46px;
   margin-bottom: 16px;
   font-weight: 500;
+}
+
+.section-main-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #6f7cb2;
+}
+
+.section-main-text__margin-bottom {
+  margin-bottom: 80px;
 }
