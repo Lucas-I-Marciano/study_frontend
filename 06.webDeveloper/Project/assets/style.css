@@ -107,12 +107,6 @@
   padding: 110px 0;
 }
 
-.woman-flower {
-  display: flex;
-  align-items: center;
-  padding: 122px 0;
-}
-
 .woman-flower .woman-flower-content {
   margin-left: 77px;
 }
@@ -176,4 +170,10 @@
 
 .section-main-text__margin-bottom {
   margin-bottom: 80px;
+}
+
+.section-flex {
+  display: flex;
+  align-items: center;
+  padding: 122px 0;
 }
