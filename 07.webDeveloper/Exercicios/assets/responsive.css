@@ -1,0 +1,15 @@
+.square {
+  height: 200px;
+  background-color: cadetblue;
+  margin: 10px;
+}
+
+@media (min-width: 992px) {
+  .all-squares {
+    display: flex;
+  }
+
+  .square {
+    flex-grow: 1;
+  }
+}
