@@ -1,0 +1,7 @@
+#meu-botao {
+  background-color: red;
+}
+
+#meu-botao:hover {
+  background-color: blue;
+}
