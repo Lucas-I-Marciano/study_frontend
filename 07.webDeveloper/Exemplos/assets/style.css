@@ -36,3 +36,10 @@ button:disabled {
   background-color: rgb(100, 99, 99);
   color: red;
 }
+
+.empty-div:empty {
+  width: 400px;
+  height: 10px;
+  background-color: aqua;
+  margin: 5px 0px 0px 2.5px;
+}
