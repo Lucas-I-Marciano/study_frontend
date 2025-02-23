@@ -1,0 +1,73 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: red;
+  font-size: 50px;
+  font-weight: lighter;
+  line-height: 100px;
+  /* line-height sets the height of a line box in horizontal writing modes */
+}
+
+#main-section {
+  border: 2px solid black;
+  background-color: antiquewhite;
+  padding: 20px;
+  margin: 20px;
+}
+
+#logo-image {
+  width: 200px;
+  height: auto;
+  /* height: auto; is default. Best practice -> Set only width */
+  display: none;
+}
+
+.blue-square {
+  background-color: aqua;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+
+/* Using CSS nesting: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting */
+.blue-square p {
+  color: red;
+}
+
+.blue-square * {
+  text-align: center;
+}
+
+.black-square {
+  background-color: black;
+  order: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-2 {
+  display: flex;
+}
+
+#left {
+  flex-grow: 1;
+}
+#center {
+  flex-grow: 2;
+}
+#right {
+  flex-grow: 1;
+}
