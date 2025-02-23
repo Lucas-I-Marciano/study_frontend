@@ -5,3 +5,7 @@
 #meu-botao:hover {
   background-color: blue;
 }
+
+.list li:nth-child(2n) {
+  background-color: antiquewhite;
+}
