@@ -5,3 +5,16 @@ body {
   background-color: $backgroundColor;
   font-family: "DM Sans", serif;
 }
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 16px;
+  border-bottom: 1px solid #26292d;
+}
