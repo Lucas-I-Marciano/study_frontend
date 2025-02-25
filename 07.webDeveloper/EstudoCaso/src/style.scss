@@ -1,6 +1,7 @@
 $backgroundColor: #171718;
 $primaryColor: #5c62ec;
 $colorRellenos: #26292d;
+$colorAcento: #85bfd1;
 
 * {
   box-sizing: border-box;
@@ -78,6 +79,28 @@ button {
       font-size: 16px;
       line-height: 28px;
       letter-spacing: 0.44px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-name {
+      color: $colorAcento;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      letter-spacing: 0.15px;
+      text-align: center;
     }
   }
 }
