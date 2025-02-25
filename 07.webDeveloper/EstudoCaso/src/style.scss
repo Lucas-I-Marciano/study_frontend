@@ -1,5 +1,6 @@
 $backgroundColor: #171718;
 $primaryColor: #5c62ec;
+$colorRellenos: #26292d;
 
 * {
   box-sizing: border-box;
@@ -40,6 +41,7 @@ button {
     line-height: 40px;
     text-align: center;
     max-width: 265px;
+    margin-bottom: 24px;
     &-name {
       color: $primaryColor;
     }
@@ -47,6 +49,22 @@ button {
 
   .button__solid {
     margin-bottom: 16px;
+  }
+}
+
+.about {
+  padding: 0px 16px;
+
+  &-card {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: $colorRellenos;
+    color: white;
+
+    &-image {
+      width: 100%;
+      border-radius: 8px;
+    }
   }
 }
 
