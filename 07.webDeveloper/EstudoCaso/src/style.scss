@@ -56,4 +56,14 @@ button {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  &-text {
+    &__mr-left {
+      margin-left: 8px;
+    }
+
+    &__mr-right {
+      margin-right: 8px;
+    }
+  }
 }
