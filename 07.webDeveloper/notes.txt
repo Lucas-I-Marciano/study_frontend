@@ -8,3 +8,8 @@ Search Engine Optimization - SEO
         meta tags with name="description" and name="keywords"
         h1 - h6 headers tags to define important topics
     
+Saas and Parcel
+    Follow this link: https://parceljs.org/getting-started/webapp/
+
+Display: inline-flex
+    flex but its width content will adjust, not use the hole parent width
