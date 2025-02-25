@@ -34,6 +34,10 @@ button {
       color: $primaryColor;
     }
   }
+
+  .button__solid {
+    margin-bottom: 16px;
+  }
 }
 
 // Generic clases
@@ -44,6 +48,8 @@ button {
   color: white;
   font-size: 16px;
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
 
   &__solid {
     background-color: $primaryColor;
