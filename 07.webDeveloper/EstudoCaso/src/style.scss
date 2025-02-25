@@ -1,6 +1,10 @@
 $backgroundColor: #171718;
 $primaryColor: #5c62ec;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: $backgroundColor;
@@ -18,12 +22,18 @@ button {
   justify-content: space-between;
   padding: 18px 16px;
   border-bottom: 1px solid #26292d;
+  position: fixed;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 .my-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  justify-content: center;
   &-title {
     color: white;
     font-size: 34px;
