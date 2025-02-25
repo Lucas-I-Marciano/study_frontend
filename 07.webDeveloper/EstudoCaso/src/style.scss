@@ -1,4 +1,5 @@
 $backgroundColor: #171718;
+$primaryColor: #5c62ec;
 
 body {
   margin: 0;
@@ -22,5 +23,11 @@ button {
 .my-info {
   &-title {
     color: white;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    &-name {
+      color: $primaryColor;
+    }
   }
 }
