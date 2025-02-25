@@ -34,3 +34,25 @@ button {
     }
   }
 }
+
+// Generic clases
+
+.button {
+  border-radius: 5px;
+  height: 48px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+
+  &__solid {
+    background-color: $primaryColor;
+    padding-left: 15.5px;
+    padding-right: 15.5px;
+  }
+
+  &__outlined {
+    border: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
