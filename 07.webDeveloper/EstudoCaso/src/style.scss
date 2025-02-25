@@ -26,6 +26,9 @@ button {
     font-size: 34px;
     line-height: 40px;
     text-align: center;
+    max-width: 265px;
+    margin-left: auto;
+    margin-right: auto;
     &-name {
       color: $primaryColor;
     }
