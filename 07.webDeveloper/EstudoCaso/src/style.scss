@@ -33,7 +33,7 @@ button {
   &-links {
     display: none;
 
-    @media (min-width: 996px) {
+    @media (min-width: 992px) {
       display: flex;
     }
 
@@ -59,7 +59,7 @@ button {
   }
 
   &-menu {
-    @media (min-width: 996px) {
+    @media (min-width: 992px) {
       display: none;
     }
   }
@@ -81,7 +81,7 @@ button {
     text-align: center;
     max-width: 265px;
     margin-bottom: 24px;
-    @media (min-width: 996px) {
+    @media (min-width: 992px) {
       max-width: 524px;
     }
 
@@ -94,7 +94,7 @@ button {
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 996px) {
+    @media (min-width: 992px) {
       flex-direction: row;
       gap: 24px;
     }
