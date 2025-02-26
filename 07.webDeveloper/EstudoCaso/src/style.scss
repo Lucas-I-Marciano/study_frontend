@@ -114,6 +114,15 @@ button {
     background-color: $colorRellenos;
     color: white;
 
+    max-width: 967px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 992px) {
+      display: flex;
+      gap: 32px;
+    }
+
     &-image {
       width: 100%;
       border-radius: 8px;
