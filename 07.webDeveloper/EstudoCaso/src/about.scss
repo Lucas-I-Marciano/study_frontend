@@ -41,3 +41,31 @@
     }
   }
 }
+
+.abilities {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &-cards {
+    &-card {
+      background-color: $backgroundColorCard;
+      color: white;
+      padding: 16px;
+      margin-bottom: 24px;
+
+      &-title {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        font-weight: 500;
+        margin: 10px 0;
+      }
+
+      &-text {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+      }
+    }
+  }
+}
