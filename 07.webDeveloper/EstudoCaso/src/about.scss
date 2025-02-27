@@ -1,11 +1,5 @@
 @import "_variables", "_header", "_footer", "style";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .my-info {
   display: flex;
   flex-direction: column;
@@ -47,6 +41,11 @@
   padding-right: 16px;
 
   &-cards {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     &-card {
       background-color: $backgroundColorCard;
       color: white;
