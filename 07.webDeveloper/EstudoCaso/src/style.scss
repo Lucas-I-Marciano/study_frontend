@@ -74,6 +74,11 @@ button {
   max-width: 524px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: 992px) {
+    height: 80vh;
+  }
+
   &-title {
     color: white;
     font-size: 34px;
@@ -190,6 +195,7 @@ button {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 
   &__solid {
     background-color: $primaryColor;
