@@ -19,9 +19,17 @@
       font-weight: 500;
       line-height: 40px;
       letter-spacing: 0.25px;
+      margin: 24px 0;
     }
 
     &-text {
+      line-height: 28px;
+      letter-spacing: 0.44px;
+    }
+
+    &-email {
+      text-decoration: none;
+      color: $primaryColor;
       line-height: 28px;
       letter-spacing: 0.44px;
     }
