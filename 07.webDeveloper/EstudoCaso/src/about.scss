@@ -1,5 +1,11 @@
 @import "_variables", "_header", "_footer", "style";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .my-info {
   display: flex;
   flex-direction: column;
