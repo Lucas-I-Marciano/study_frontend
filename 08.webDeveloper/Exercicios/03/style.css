@@ -43,3 +43,13 @@
   line-height: 40px;
   color: darkblue;
 }
+
+.button {
+  max-width: 173px;
+  width: 100%;
+  background-color: transparent;
+  height: 30px;
+  font-size: 16px;
+  box-shadow: 2px 2px darkblue;
+  cursor: pointer;
+}
