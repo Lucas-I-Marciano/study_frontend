@@ -9,4 +9,25 @@ main {
   width: 375px;
   height: 812px;
   border-radius: 39px;
+  padding: 42px 32px;
+}
+
+.calculator-pad {
+  margin-top: 288px;
+}
+
+.calculator-pad-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.calculator-pad-row-square {
+  background-color: #303136;
+  height: 40px;
+  width: 62px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
