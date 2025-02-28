@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $backgroundColor;
+  font-family: "DM Sans", serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+// Generic clases
+
+.button {
+  border-radius: 5px;
+  height: 48px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__solid {
+    background-color: $primaryColor;
+    padding-left: 15.5px;
+    padding-right: 15.5px;
+  }
+
+  &__outlined {
+    border: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-text {
+    &__mr-left {
+      margin-left: 8px;
+    }
+
+    &__mr-right {
+      margin-right: 8px;
+    }
+  }
+}
+
+.container {
+  max-width: 1156px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}

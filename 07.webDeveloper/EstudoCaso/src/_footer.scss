@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-name {
+      color: $colorAcento;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      letter-spacing: 0.15px;
+      text-align: center;
+    }
+
+    &-link {
+      font-size: 14px;
+      color: white;
+      line-height: 20px;
+      letter-spacing: 0.25px;
+      text-decoration: none;
+    }
+  }
+}
