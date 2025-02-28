@@ -57,3 +57,9 @@ main {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+.span-blue-highlighted {
+  color: #b2daff;
+  font-size: 32px;
+  font-family: "Poppins", serif;
+}
