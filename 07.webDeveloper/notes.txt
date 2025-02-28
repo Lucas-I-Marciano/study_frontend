@@ -1,0 +1,15 @@
+A CSS pseudo-class is a keyword added to a selector that lets you style a specific state of the selected element(s). For example, the pseudo-class :hover
+    See https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+Search Engine Optimization - SEO
+    Search mechanism - Web Crawler
+    Strategy
+        'title' and 'alt' attributes very well described
+        meta tags with name="description" and name="keywords"
+        h1 - h6 headers tags to define important topics
+    
+Saas and Parcel
+    Follow this link: https://parceljs.org/getting-started/webapp/
+
+Display: inline-flex
+    flex but its width content will adjust, not use the hole parent width
