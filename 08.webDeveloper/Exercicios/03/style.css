@@ -29,3 +29,17 @@
   line-height: 30px;
   letter-spacing: 0.5px;
 }
+
+.calculator-operation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid rgb(44, 53, 53);
+}
+
+.calculator-result {
+  font-size: 30px;
+  line-height: 40px;
+  color: darkblue;
+}
