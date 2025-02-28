@@ -27,4 +27,9 @@ window.onload = () => {
     }
     spanElement.innerText = result;
   });
+
+  resetButton.addEventListener("click", () => {
+    form.reset();
+    spanElement.innerText = "";
+  });
 };
