@@ -16,6 +16,7 @@ window.onload = () => {
       const response = await (
         await fetch("https://jsonplaceholder.typicode.com/todos", {
           method: "POST",
+          "Content-Type": "application/json",
           body: JSON.stringify({ title: taskTitle }),
         })
       ).json();
