@@ -9,6 +9,9 @@ window.onload = () => {
   const [one, two, three, equal] = rows[4].querySelectorAll("div");
   const [, zero, dot] = rows[5].querySelectorAll("div");
 
+  const spanResult = document.querySelector(".calculator-screen-result");
+  const spanMath = document.querySelector(".calculator-screen-math");
+
   // prettier-ignore
   const allButtons = [
     e,mi,sin,deg,ac,back,div,mult,seven,eight,nine,minus,
@@ -20,6 +23,7 @@ window.onload = () => {
   let isIncreasingNumberOne = true;
   let operation = "";
   let result = 0;
+  let operationSignal = "";
   for (const element of allButtons) {
     element.addEventListener("click", () => {
       if (element === ac) {
@@ -27,15 +31,19 @@ window.onload = () => {
         isIncreasingNumberOne = true;
       } else if (element === div) {
         operation = "divide";
+        operationSignal = "/";
         isIncreasingNumberOne = false;
       } else if (element === mult) {
         operation = "multiply";
+        operationSignal = "*";
         isIncreasingNumberOne = false;
       } else if (element === plus) {
         operation = "sum";
+        operationSignal = "+";
         isIncreasingNumberOne = false;
       } else if (element === minus) {
         operation = "subtract";
+        operationSignal = "-";
         isIncreasingNumberOne = false;
       } else if (element === equal) {
         numberOne = parseFloat(numberOne);
@@ -54,15 +62,14 @@ window.onload = () => {
             result = numberOne - numberTwo;
             break;
         }
-        console.log(result);
+        spanResult.innerText = result;
       } else {
         if (isIncreasingNumberOne) {
           numberOne = `${numberOne}${element.innerText}`;
-          console.log(numberOne);
+          spanMath.innerText = numberOne;
         } else {
           numberTwo = `${numberTwo}${element.innerText}`;
-          console.log(numberOne);
-          console.log(numberTwo);
+          spanMath.innerText = `${numberOne}${operationSignal}${numberTwo}`;
         }
       }
     });
