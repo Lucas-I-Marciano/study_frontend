@@ -1,8 +1,11 @@
 window.onload = () => {
   const form = document.querySelector("form");
+  const ulElement = document.querySelector("ul");
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const taskTitle = event.target[0].value;
+
+    ulElement.innerHTML += `<li>${taskTitle}</li> `;
 
     try {
       const response = await (
