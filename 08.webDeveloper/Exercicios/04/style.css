@@ -56,6 +56,12 @@ main {
   align-items: center;
 }
 
+.calculator-pad-row-square:hover {
+  background-color: antiquewhite;
+  box-shadow: 6px 6px;
+  font-weight: bolder;
+}
+
 .calculator-pad-row-square__blue {
   background-color: #005db2;
 }
