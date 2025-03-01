@@ -16,21 +16,34 @@ window.onload = () => {
   ];
 
   let numberOne = "";
+  let numberTwo = "";
+  let isIncreasingNumberOne = true;
   for (const element of allButtons) {
     element.addEventListener("click", () => {
       if (element === ac) {
         numberOne = "";
+        isIncreasingNumberOne = true;
       } else if (element === div) {
         console.log("Divide");
+        isIncreasingNumberOne = false;
       } else if (element === mult) {
         console.log("Multiply");
+        isIncreasingNumberOne = false;
       } else if (element === plus) {
         console.log("Sum");
+        isIncreasingNumberOne = false;
       } else if (element === minus) {
         console.log("Subtract");
+        isIncreasingNumberOne = false;
       } else {
-        numberOne = `${numberOne}${element.innerText}`;
-        console.log(numberOne);
+        if (isIncreasingNumberOne) {
+          numberOne = `${numberOne}${element.innerText}`;
+          console.log(numberOne);
+        } else {
+          numberTwo = `${numberTwo}${element.innerText}`;
+          console.log(numberOne);
+          console.log(numberTwo);
+        }
       }
     });
   }
