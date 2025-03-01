@@ -1,16 +1,18 @@
 window.onload = () => {
   const form = document.querySelector("form");
-  const input = document.querySelector("input");
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const taskTitle = event.target.querySelector("input").value;
+    const taskTitle = event.target[0].value;
 
-    const response = await (
-      await fetch("https://jsonplaceholder.typicode.com/todos", {
-        method: "POST",
-        body: { title: taskTitle },
-      })
-    ).json();
-    console.log(response);
+    try {
+      const response = await (
+        await fetch("https://jsonplaceholder.typicode.com/todos", {
+          method: "POST",
+          body: JSON.stringify({ title: taskTitle }),
+        })
+      ).json();
+    } catch (error) {
+      alert(error);
+    }
   });
 };
