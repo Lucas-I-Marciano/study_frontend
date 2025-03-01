@@ -12,7 +12,7 @@ window.onload = () => {
     ulElement.appendChild(liElement);
 
     try {
-      if (count === 3) {
+      if (count % 3 === 0) {
         const response = await (
           await fetch("https://jsonplaceholder.t.com/todos", {
             method: "POST",
