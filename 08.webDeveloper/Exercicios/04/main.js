@@ -28,7 +28,11 @@ window.onload = () => {
     element.addEventListener("click", () => {
       if (element === ac) {
         numberOne = "";
+        numberTwo = "";
+        operationSignal = "";
         isIncreasingNumberOne = true;
+        spanResult.innerText = ".";
+        spanMath.innerText = ".";
       } else if (element === div) {
         operation = "divide";
         operationSignal = "/";
@@ -66,12 +70,14 @@ window.onload = () => {
       } else {
         if (isIncreasingNumberOne) {
           numberOne = `${numberOne}${element.innerText}`;
-          spanMath.innerText = numberOne;
         } else {
           numberTwo = `${numberTwo}${element.innerText}`;
-          spanMath.innerText = `${numberOne}${operationSignal}${numberTwo}`;
         }
       }
+      const isMathEmpty = `${numberOne}${operationSignal}${numberTwo}` === "";
+      spanMath.innerText = isMathEmpty
+        ? "."
+        : `${numberOne}${operationSignal}${numberTwo}`;
     });
   }
 };
