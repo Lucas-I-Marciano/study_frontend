@@ -18,23 +18,43 @@ window.onload = () => {
   let numberOne = "";
   let numberTwo = "";
   let isIncreasingNumberOne = true;
+  let operation = "";
+  let result = 0;
   for (const element of allButtons) {
     element.addEventListener("click", () => {
       if (element === ac) {
         numberOne = "";
         isIncreasingNumberOne = true;
       } else if (element === div) {
-        console.log("Divide");
+        operation = "divide";
         isIncreasingNumberOne = false;
       } else if (element === mult) {
-        console.log("Multiply");
+        operation = "multiply";
         isIncreasingNumberOne = false;
       } else if (element === plus) {
-        console.log("Sum");
+        operation = "sum";
         isIncreasingNumberOne = false;
       } else if (element === minus) {
-        console.log("Subtract");
+        operation = "subtract";
         isIncreasingNumberOne = false;
+      } else if (element === equal) {
+        numberOne = parseFloat(numberOne);
+        numberTwo = parseFloat(numberTwo);
+        switch (operation) {
+          case "divide":
+            result = numberOne / numberTwo;
+            break;
+          case "multiply":
+            result = numberOne * numberTwo;
+            break;
+          case "sum":
+            result = numberOne + numberTwo;
+            break;
+          case "subtract":
+            result = numberOne - numberTwo;
+            break;
+        }
+        console.log(result);
       } else {
         if (isIncreasingNumberOne) {
           numberOne = `${numberOne}${element.innerText}`;
