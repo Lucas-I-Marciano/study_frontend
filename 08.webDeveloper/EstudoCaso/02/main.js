@@ -7,11 +7,19 @@ window.onload = () => {
     event.preventDefault();
     const taskTitle = event.target[0].value;
 
-    ulElement.innerHTML += `<li>${count}: ${taskTitle}</li> `;
+    const liElement = document.createElement("li");
+    liElement.innerText = `${count}: ${taskTitle}`;
+    ulElement.appendChild(liElement);
 
     try {
       if (count === 3) {
-        throw new Error("Three brings bad lucky");
+        const response = await (
+          await fetch("https://jsonplaceholder.t.com/todos", {
+            method: "POST",
+            "Content-Type": "application/json",
+            body: JSON.stringify({ title: taskTitle }),
+          })
+        ).json();
       }
       const response = await (
         await fetch("https://jsonplaceholder.typicode.com/todos", {
@@ -21,9 +29,7 @@ window.onload = () => {
         })
       ).json();
     } catch (error) {
-      const liArray = ulElement.querySelectorAll("li");
-      const lastLiElement = liArray[liArray.length - 1];
-      lastLiElement.remove();
+      liElement.remove();
       alert(error);
     }
   });
