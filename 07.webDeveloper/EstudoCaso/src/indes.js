@@ -7,4 +7,10 @@ window.onload = () => {
     navbarCloseMenu.classList.add("display-block");
     navbarMenu.classList.add("display-none");
   });
+
+  navbarCloseMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("display-none");
+    navbarCloseMenu.classList.remove("display-block");
+    navbarMenu.classList.remove("display-none");
+  });
 };
