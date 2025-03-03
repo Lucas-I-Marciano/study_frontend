@@ -7,13 +7,20 @@
   padding: 93px 16px;
   text-align: center;
   color: white;
+  font-family: "DM Sans", serif;
 
   &-title {
-    font-family: "DM Sans", serif;
     font-weight: 500;
     font-size: 34px;
     line-height: 40px;
     letter-spacing: 0.25px;
+  }
+
+  &-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
   }
 }
 
