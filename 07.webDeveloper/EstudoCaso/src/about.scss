@@ -1,4 +1,7 @@
-@import "_variables", "_header", "_footer", "style";
+@use "_footer";
+@use "_header";
+@use "style";
+@use "_variables" as variable;
 
 .my-info {
   display: flex;
@@ -46,7 +49,7 @@
 
     &-email {
       text-decoration: none;
-      color: $primaryColor;
+      color: variable.$primaryColor;
       line-height: 28px;
       letter-spacing: 0.44px;
     }
@@ -91,7 +94,7 @@
     }
 
     &-card {
-      background-color: $backgroundColorCard;
+      background-color: variable.$backgroundColorCard;
       color: white;
       padding: 16px;
       margin-bottom: 24px;
