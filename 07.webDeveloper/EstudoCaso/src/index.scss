@@ -1,5 +1,7 @@
 @import "_variables", "_footer", "_header", "style";
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 .my-info {
   display: flex;
   flex-direction: column;
@@ -80,5 +82,16 @@
       line-height: 28px;
       letter-spacing: 0.44px;
     }
+  }
+}
+
+.mobile-menu {
+  color: white;
+  font-size: 16px;
+  line-height: 18.75px;
+
+  &-text {
+    padding: 8px 16px;
+    font-family: "Roboto", sans-serif;
   }
 }
