@@ -1,14 +1,14 @@
 h1 {
   font-size: 24px;
-  color: aquamarine;
-  background-color: burlywood;
+  color: #101820;
+  background-color: #fee715;
   text-align: center;
   padding: 10px;
 }
 
 p {
-  color: burlywood;
-  background-color: aquamarine;
+  color: #fee715;
+  background-color: #101820;
   font-size: 16px;
   padding: 10px;
 }
