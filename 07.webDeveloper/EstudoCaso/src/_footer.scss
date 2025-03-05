@@ -1,3 +1,5 @@
+@use "_variables" as variable;
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -17,7 +19,7 @@
     justify-content: center;
 
     &-name {
-      color: $colorAcento;
+      color: variable.$colorAcento;
       font-size: 16px;
       line-height: 20px;
       font-weight: 500;

@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: #17181a;
+  width: 375px;
+  height: 812px;
+  border-radius: 39px;
+  padding: 42px 32px;
+}
+
+.calculator-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 78px 0px;
+}
+
+.calculator-screen-math {
+  font-family: "Poppins", serif;
+  font-size: 24px;
+  color: #818181;
+}
+
+.calculator-screen-result {
+  font-family: "Poppins", serif;
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.calculator-pad {
+  margin-top: 108px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calculator-pad-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.calculator-pad-row-square {
+  background-color: #303136;
+  height: 62px;
+  width: 62px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-pad-row-square:hover {
+  background-color: antiquewhite;
+  box-shadow: 6px 6px;
+  font-weight: bolder;
+}
+
+.calculator-pad-row-square__blue {
+  background-color: #005db2;
+}
+
+.calculator-pad-row-square__height {
+  height: 40px;
+}
+
+.span-gray {
+  color: #a5a5a5;
+  font-size: 24px;
+  font-family: "Poppins", serif;
+}
+
+.span-blue {
+  color: #339dff;
+  font-size: 24px;
+  font-family: "Poppins", serif;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.span-blue-highlighted {
+  color: #b2daff;
+  font-size: 32px;
+  font-family: "Poppins", serif;
+}

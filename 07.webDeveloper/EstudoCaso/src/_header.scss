@@ -1,3 +1,5 @@
+@use "_variables" as variable;
+
 .navbar {
   display: flex;
   align-items: center;
@@ -9,6 +11,10 @@
   max-width: 100%;
   width: 100%;
   z-index: 999;
+
+  &-close-menu {
+    display: none;
+  }
 
   &-links {
     display: none;
@@ -29,7 +35,7 @@
           content: "";
           position: absolute;
           height: 3px;
-          background-color: $primaryColor;
+          background-color: variable.$primaryColor;
           width: 100%;
           bottom: 0;
           left: 0;

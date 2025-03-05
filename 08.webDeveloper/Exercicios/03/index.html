@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="calculator">
+        <div class="calculator-info">
+          <h1 class="calculator-info-title">Calculadora</h1>
+          <p class="calculator-info-text">
+            Esta calculadora faz a operação que você desejar apenas mudando a
+            seleção 😀
+          </p>
+        </div>
+        <form class="calculator-operation">
+          <label for="numberOne">1º Número</label>
+          <input type="number" name="numberOne" />
+          <label for="numberTwo">2º Número</label>
+          <input type="number" name="numberTwo" />
+          <select name="operation">
+            <option value="subtraction">Subtração</option>
+            <option value="sum">Somar</option>
+            <option value="multiply">Multiplicar</option>
+            <option value="divide">Dividir</option>
+          </select>
+          <input class="button" type="submit" value="Enviar" />
+        </form>
+        <button class="button">Resetar</button>
+        <span class="calculator-result"></span>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
