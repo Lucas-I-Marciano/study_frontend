@@ -1,10 +1,12 @@
+@use "_variables" as variable;
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: $backgroundColor;
+  background-color: variable.$backgroundColor;
   font-family: "DM Sans", serif;
 }
 
@@ -26,7 +28,7 @@ button {
   cursor: pointer;
 
   &__solid {
-    background-color: $primaryColor;
+    background-color: variable.$primaryColor;
     padding-left: 15.5px;
     padding-right: 15.5px;
   }

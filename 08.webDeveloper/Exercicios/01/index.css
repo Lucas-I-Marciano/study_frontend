@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.register-sec {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.register-sec-info {
+  padding: 20px 0;
+}
+
+.register-sec-form-input {
+  padding: 10px;
+  border: 1px solid goldenrod;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}

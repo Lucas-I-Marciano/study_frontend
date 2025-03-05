@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="register-sec">
+        <div class="register-sec-info">
+          <h1>Cadastro de Pessoas</h1>
+          <p>Este formulário cadastrará você em nosso banco de dados 😀</p>
+        </div>
+      </section>
+      <section class="register-sec">
+        <form class="register-sec-form" action="">
+          <div class="register-sec-form-input">
+            <label for="name">Nome</label>
+            <input name="name" type="text" placeholder="Lucas Marciano" />
+          </div>
+          <div class="register-sec-form-input">
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="seu-email@xuz.com" />
+          </div>
+          <div class="register-sec-form-input">
+            <label for="birthday">Data de Nascimento</label>
+            <input type="date" name="birthday" id="" />
+          </div>
+          <div class="register-sec-form-input">
+            <span>Linguagem Favorita:</span>
+            <div class="register-sec-form-input-radios">
+              <input type="radio" name="language" id="js" value="JS" />
+              <label for="language">JS</label>
+              <input type="radio" name="language" id="basic" value="Basic" />
+              <label for="language">Basic</label>
+            </div>
+          </div>
+          <div class="register-sec-form-input">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+form,
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  background-color: antiquewhite;
+  margin-bottom: 5px;
+  box-shadow: 2px 2px;
+}
