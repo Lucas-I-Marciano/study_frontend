@@ -1,7 +1,7 @@
 import "./Button.css";
 
-const Button = () => {
-  return <button>Meu botão</button>;
+const Button = (props) => {
+  return <button className="button">Meu botão</button>;
 };
 
 export default Button;
