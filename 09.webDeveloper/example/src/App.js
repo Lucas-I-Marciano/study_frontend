@@ -6,7 +6,8 @@ function App() {
     <div className="App">
       <h1>Meu nome é Lucas</h1>
       <p>Estou estudando react</p>
-      <Button />
+      <Button variant="solid" />
+      <Button variant="outlined" />
     </div>
   );
 }
