@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header>Artigos Publicados</Header>
       <Main />
-      <Footer>Desenvolvido por Lucas M.</Footer>
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import "./Footer.css";
 
-const Footer = (props) => {
-  return <footer className="footer">{props.children}</footer>;
+const Footer = () => {
+  return <footer className="footer">Desenvolvido por Lucas M.</footer>;
 };
 
 export default Footer;
