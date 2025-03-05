@@ -7,3 +7,11 @@ React
     Library to develop Front-end based on component
     Command to create React app: npx create-react-app <my-app>
     .jsx allow us to write a like-html code
+
+Components
+    Independent parts
+    Capital letter
+    return null -> Tells to not show on screen
+
+Props (Property)
+    Entry data of a component
