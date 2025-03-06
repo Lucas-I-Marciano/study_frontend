@@ -19,7 +19,9 @@ function App() {
         </Button>
       </div>
       <div className="container-text">
-        <Text>Olá</Text>
+        <Text fontSize="sm">Olá</Text>
+        <Text fontSize="md">Olá</Text>
+        <Text fontSize="lg">Olá</Text>
       </div>
     </div>
   );
