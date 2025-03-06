@@ -8,6 +8,7 @@
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .button__solid {
@@ -15,8 +16,16 @@
   color: white;
 }
 
+.button__solid:hover {
+  background: #2c7a7b;
+}
+
 .button__outline {
   color: #2c7a7b;
   background: transparent;
   border: 1px solid currentColor;
+}
+
+.button__outline:hover {
+  background: #e6fffa;
 }
