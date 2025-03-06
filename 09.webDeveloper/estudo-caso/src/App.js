@@ -22,6 +22,9 @@ function App() {
         <Text fontSize="sm">Olá</Text>
         <Text fontSize="md">Olá</Text>
         <Text fontSize="lg">Olá</Text>
+        <Text as="h1" fontSize="lg">
+          H1
+        </Text>
       </div>
     </div>
   );

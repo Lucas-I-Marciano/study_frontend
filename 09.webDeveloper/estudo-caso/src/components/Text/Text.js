@@ -1,8 +1,9 @@
 import "./Text.css";
 
 const Text = (props) => {
-  const { children, fontSize } = props;
-  return <p className={`font-${fontSize}`}>{children}</p>;
+  const { children, fontSize, as = "p" } = props;
+  const Component = as;
+  return <Component className={`font-${fontSize}`}>{children}</Component>;
 };
 
 export default Text;
