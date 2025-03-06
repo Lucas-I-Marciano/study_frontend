@@ -2,7 +2,10 @@ import "./Button.css";
 
 const Button = (props) => {
   return (
-    <button className={`button button__${props.variant}`}>
+    <button
+      className={`button button__${props.variant}`}
+      disabled={props.disabled || props.isLoading}
+    >
       {props.isLoading ? "Carregando..." : props.children}
     </button>
   );

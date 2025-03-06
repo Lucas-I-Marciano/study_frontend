@@ -9,6 +9,9 @@ function App() {
       <Button variant="outline" isLoading>
         Outline
       </Button>
+      <Button variant="solid" disabled>
+        Solid
+      </Button>
     </div>
   );
 }
