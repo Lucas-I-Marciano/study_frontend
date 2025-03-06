@@ -6,6 +6,9 @@ function App() {
     <div className="container">
       <Button variant="solid">Solid</Button>
       <Button variant="outline">Outline</Button>
+      <Button variant="outline" isLoading>
+        Outline
+      </Button>
     </div>
   );
 }
