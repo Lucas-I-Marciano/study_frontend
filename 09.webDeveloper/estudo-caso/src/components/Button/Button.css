@@ -76,3 +76,36 @@
     background: #3182ce;
   }
 }
+
+.color-scheme__pink {
+  &.button__solid {
+    background: #d53f8c;
+    color: white;
+  }
+  &.button__solid:hover {
+    background: #b83280;
+  }
+
+  &.button__outline {
+    color: #b83280;
+    background: transparent;
+    border: 1px solid currentColor;
+  }
+
+  &.button__outline:hover {
+    background: #fff5f7;
+  }
+
+  &.button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &.button__outline:disabled:hover {
+    background: transparent;
+  }
+
+  &.button__solid:disabled:hover {
+    background: #d53f8c;
+  }
+}

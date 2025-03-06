@@ -22,6 +22,14 @@ function App() {
         </Button>
         <br></br>
         <br></br>
+        <Button variant="solid" colorScheme="pink">
+          Solid pink
+        </Button>
+        <Button variant="outline" colorScheme="pink">
+          Outline pink
+        </Button>
+        <br></br>
+        <br></br>
         <Button variant="outline" isLoading>
           Outline
         </Button>
