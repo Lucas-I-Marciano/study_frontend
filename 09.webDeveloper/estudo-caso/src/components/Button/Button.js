@@ -2,7 +2,7 @@ import "./Button.css";
 
 const Button = (props) => {
   const {
-    variant,
+    variant = "solid",
     disabled,
     isLoading,
     children,
