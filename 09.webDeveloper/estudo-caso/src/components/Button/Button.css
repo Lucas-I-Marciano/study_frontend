@@ -20,6 +20,15 @@
   border: 1px solid currentColor;
 }
 
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.button__outline:disabled:hover {
+  background: transparent;
+}
+
 .color-scheme__teal {
   &.button__solid {
     background: #319795;
@@ -34,15 +43,6 @@
 
   &.button__outline:hover {
     background: #e6fffa;
-  }
-
-  &.button:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-
-  &.button__outline:disabled:hover {
-    background: transparent;
   }
 
   &.button__solid:disabled:hover {
@@ -66,15 +66,6 @@
     background: #ebf8ff;
   }
 
-  &.button:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-
-  &.button__outline:disabled:hover {
-    background: transparent;
-  }
-
   &.button__solid:disabled:hover {
     background: #3182ce;
   }
@@ -94,15 +85,6 @@
 
   &.button__outline:hover {
     background: #fff5f7;
-  }
-
-  &.button:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-
-  &.button__outline:disabled:hover {
-    background: transparent;
   }
 
   &.button__solid:disabled:hover {
