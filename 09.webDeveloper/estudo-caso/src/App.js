@@ -41,9 +41,15 @@ function App() {
         </Button>
       </div>
       <div className="container-text">
-        <Text fontSize="sm">Olá</Text>
-        <Text fontSize="md">Olá</Text>
-        <Text fontSize="lg">Olá</Text>
+        <Text fontSize="sm" align="center">
+          Olá
+        </Text>
+        <Text fontSize="md" align="end">
+          Olá
+        </Text>
+        <Text fontSize="lg" align="start">
+          Olá
+        </Text>
         <Text as="h1" fontSize="lg">
           H1
         </Text>
