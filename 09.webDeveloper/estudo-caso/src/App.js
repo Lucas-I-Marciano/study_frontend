@@ -12,6 +12,9 @@ function App() {
       <Button variant="solid" disabled>
         Solid
       </Button>
+      <Button variant="solid" onClick={() => console.log("Click")}>
+        Click Solid
+      </Button>
     </div>
   );
 }
