@@ -7,6 +7,7 @@ const Button = (props) => {
     <button
       className={`button button__${variant}`}
       disabled={disabled || isLoading}
+      onClick={rest.functionToConsoleClick}
       {...rest}
     >
       {isLoading ? "Carregando..." : children}
