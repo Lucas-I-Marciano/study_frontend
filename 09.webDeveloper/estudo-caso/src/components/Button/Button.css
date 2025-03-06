@@ -43,3 +43,36 @@
     background: #319795;
   }
 }
+
+.color-scheme__blue {
+  &.button__solid {
+    background: #3182ce;
+    color: white;
+  }
+  &.button__solid:hover {
+    background: #2b6cb0;
+  }
+
+  &.button__outline {
+    color: #2b6cb0;
+    background: transparent;
+    border: 1px solid currentColor;
+  }
+
+  &.button__outline:hover {
+    background: #ebf8ff;
+  }
+
+  &.button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &.button__outline:disabled:hover {
+    background: transparent;
+  }
+
+  &.button__solid:disabled:hover {
+    background: #3182ce;
+  }
+}

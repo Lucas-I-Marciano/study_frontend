@@ -7,9 +7,21 @@ function App() {
     <div className="container">
       <div className="container-buttons">
         <Button variant="solid" colorScheme="teal">
-          Solid
+          Solid teal
         </Button>
-        <Button variant="outline">Outline</Button>
+        <Button variant="outline" colorScheme="teal">
+          Outline teal
+        </Button>
+        <br></br>
+        <br></br>
+        <Button variant="solid" colorScheme="blue">
+          Solid blue
+        </Button>
+        <Button variant="outline" colorScheme="blue">
+          Outline blue
+        </Button>
+        <br></br>
+        <br></br>
         <Button variant="outline" isLoading>
           Outline
         </Button>
