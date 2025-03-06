@@ -29,3 +29,16 @@
 .button__outline:hover {
   background: #e6fffa;
 }
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.button__outline:disabled:hover {
+  background: transparent;
+}
+
+.button__solid:disabled:hover {
+  background: #319795;
+}
