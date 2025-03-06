@@ -9,3 +9,15 @@
 .font-lg {
   font-size: 22px;
 }
+
+.align-center {
+  text-align: center;
+}
+
+.align-end {
+  text-align: end;
+}
+
+.align-start {
+  text-align: start;
+}
