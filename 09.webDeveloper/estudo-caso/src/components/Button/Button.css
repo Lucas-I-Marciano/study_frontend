@@ -15,6 +15,11 @@
   color: white;
 }
 
+.button__outline {
+  background: transparent;
+  border: 1px solid currentColor;
+}
+
 .color-scheme__teal {
   &.button__solid {
     background: #319795;
@@ -25,8 +30,6 @@
 
   &.button__outline {
     color: #2c7a7b;
-    background: transparent;
-    border: 1px solid currentColor;
   }
 
   &.button__outline:hover {
@@ -57,8 +60,6 @@
 
   &.button__outline {
     color: #2b6cb0;
-    background: transparent;
-    border: 1px solid currentColor;
   }
 
   &.button__outline:hover {
@@ -89,8 +90,6 @@
 
   &.button__outline {
     color: #b83280;
-    background: transparent;
-    border: 1px solid currentColor;
   }
 
   &.button__outline:hover {
