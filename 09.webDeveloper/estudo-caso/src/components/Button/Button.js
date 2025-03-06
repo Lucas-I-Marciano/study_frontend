@@ -1,13 +1,15 @@
 import "./Button.css";
 
 const Button = (props) => {
+  const { variant, disabled, isLoading, children, ...rest } = props;
+  console.log(rest); // {onClick: ƒ}
   return (
     <button
-      className={`button button__${props.variant}`}
-      disabled={props.disabled || props.isLoading}
-      onClick={props.onClick}
+      className={`button button__${variant}`}
+      disabled={disabled || isLoading}
+      {...rest}
     >
-      {props.isLoading ? "Carregando..." : props.children}
+      {isLoading ? "Carregando..." : children}
     </button>
   );
 };
