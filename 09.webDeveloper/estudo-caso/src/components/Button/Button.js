@@ -1,11 +1,18 @@
 import "./Button.css";
 
 const Button = (props) => {
-  const { variant, disabled, isLoading, children, ...rest } = props;
+  const {
+    variant,
+    disabled,
+    isLoading,
+    children,
+    colorScheme = "teal",
+    ...rest
+  } = props;
   console.log(rest); // {onClick: ƒ}
   return (
     <button
-      className={`button button__${variant}`}
+      className={`button button__${variant} color-scheme__${colorScheme}`}
       disabled={disabled || isLoading}
       {...rest}
     >

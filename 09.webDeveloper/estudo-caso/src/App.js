@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="container">
       <div className="container-buttons">
-        <Button variant="solid">Solid</Button>
+        <Button variant="solid" colorScheme="teal">
+          Solid
+        </Button>
         <Button variant="outline">Outline</Button>
         <Button variant="outline" isLoading>
           Outline

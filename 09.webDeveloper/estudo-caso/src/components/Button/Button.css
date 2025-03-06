@@ -11,34 +11,35 @@
   margin-left: 10px;
 }
 
-.button__solid {
-  background: #319795;
-  color: white;
-}
+.color-scheme__teal {
+  &.button__solid {
+    background: #319795;
+    color: white;
+  }
+  &.button__solid:hover {
+    background: #2c7a7b;
+  }
 
-.button__solid:hover {
-  background: #2c7a7b;
-}
+  &.button__outline {
+    color: #2c7a7b;
+    background: transparent;
+    border: 1px solid currentColor;
+  }
 
-.button__outline {
-  color: #2c7a7b;
-  background: transparent;
-  border: 1px solid currentColor;
-}
+  &.button__outline:hover {
+    background: #e6fffa;
+  }
 
-.button__outline:hover {
-  background: #e6fffa;
-}
+  &.button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 
-.button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
+  &.button__outline:disabled:hover {
+    background: transparent;
+  }
 
-.button__outline:disabled:hover {
-  background: transparent;
-}
-
-.button__solid:disabled:hover {
-  background: #319795;
+  &.button__solid:disabled:hover {
+    background: #319795;
+  }
 }
