@@ -1,8 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Button from "./components/Button/Button";
 
 function App() {
-  return <div className="container">Está Limpo</div>;
+  return (
+    <div className="container">
+      <Button>Texto do Botão</Button>
+    </div>
+  );
 }
 
 export default App;
