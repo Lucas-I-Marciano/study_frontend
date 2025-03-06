@@ -4,7 +4,8 @@ import Button from "./components/Button/Button";
 function App() {
   return (
     <div className="container">
-      <Button>Texto do Botão</Button>
+      <Button variant="solid">Solid</Button>
+      <Button variant="outline">Outline</Button>
     </div>
   );
 }
