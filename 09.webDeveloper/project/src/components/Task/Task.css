@@ -1,6 +1,6 @@
 .task {
-  width: 280px;
-  height: 81px;
+  width: 260px;
+  height: 51px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -16,6 +16,25 @@
   line-height: 21px;
   letter-spacing: -2%;
   color: #171717;
-  margin: 0;
-  padding: 0;
+}
+
+.task-flags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+.task-flags-label {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 700;
+  letter-spacing: -2%;
+  padding: 5px 4px;
+  border-radius: 2px;
+}
+
+.task-flags-label__todo {
+  color: white;
+  background-color: #59b4d1;
 }
