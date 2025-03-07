@@ -34,7 +34,19 @@
   border-radius: 2px;
 }
 
-.task-flags-label__todo {
+.task-flags-label__blue {
   color: white;
   background-color: #59b4d1;
+}
+.task-flags-label__orange {
+  color: white;
+  background-color: #d0935a;
+}
+.task-flags-label__purple {
+  color: white;
+  background-color: #945ad1;
+}
+.task-flags-label__green {
+  color: white;
+  background-color: #59d090;
 }
