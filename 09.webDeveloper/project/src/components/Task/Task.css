@@ -1,0 +1,11 @@
+.task {
+  width: 280px;
+  height: 81px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 15px 10px;
+  border-radius: 4px;
+  box-shadow: 1px 1px gray;
+}
