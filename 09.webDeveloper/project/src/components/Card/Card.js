@@ -17,6 +17,24 @@ export const Card = () => {
             colorScheme="todo"
             avatarUrl="male"
           ></Task>
+          <Task
+            title="Redo Portfolio"
+            label="label"
+            colorScheme="todo"
+            avatarUrl="male"
+          ></Task>
+          <Task
+            title="Clean code"
+            label="label"
+            colorScheme="todo"
+            avatarUrl="male"
+          ></Task>
+          <Task
+            title="Fix layout"
+            label="label"
+            colorScheme="todo"
+            avatarUrl="male"
+          ></Task>
         </div>
       </div>
     </div>
