@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Header>Kanban</Header>
-        <Card titleColor="black" colorScheme="blue">
+        <Card titleColor="black" colorScheme="blue" icon="✔️">
           <Task
             title="Redo Portfolio"
             label="label"
