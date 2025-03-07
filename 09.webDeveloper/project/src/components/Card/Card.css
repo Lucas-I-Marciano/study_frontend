@@ -1,9 +1,10 @@
 .card {
   padding: 10px;
   background-color: #59b4d1;
-  width: 280px;
+  width: 300px;
   position: relative;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .card-shadow {
