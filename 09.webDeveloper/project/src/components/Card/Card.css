@@ -31,3 +31,9 @@
   letter-spacing: -2%;
   color: white;
 }
+
+.card-content-task {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
