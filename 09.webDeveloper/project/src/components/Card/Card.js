@@ -1,7 +1,13 @@
 import "./Card.css";
 
 export const Card = (props) => {
-  const { children, titleColor, colorScheme = "blue", icon = "🗒️" } = props;
+  const {
+    children,
+    titleColor,
+    titleText,
+    colorScheme = "blue",
+    icon = "🗒️",
+  } = props;
   console.log(children);
   return (
     <div className={`card card__${colorScheme}`}>
@@ -12,7 +18,7 @@ export const Card = (props) => {
           <span
             className={`card-content-title-text card-content-title-text__${titleColor}`}
           >
-            To Do
+            {titleText}
           </span>
         </div>
         <div className="card-content-task">
