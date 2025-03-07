@@ -4,3 +4,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.container {
+  padding: 36px 60px;
+}
