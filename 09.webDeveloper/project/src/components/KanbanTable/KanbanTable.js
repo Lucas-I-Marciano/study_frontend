@@ -18,6 +18,23 @@ export const KanbanTable = () => {
           );
         })}
       </Card>
+      <Card
+        titleText="In Progress"
+        titleColor="white"
+        colorScheme="orange"
+        icon="✔️"
+      >
+        {dbTask.map((element) => {
+          return (
+            <Task
+              title={element.title}
+              label={element.label}
+              colorScheme={element.colorScheme}
+              avatarUrl={element.avatarUrl}
+            ></Task>
+          );
+        })}
+      </Card>
     </div>
   );
 };
