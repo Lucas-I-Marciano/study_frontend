@@ -3,11 +3,21 @@ import { dbTask } from "../Task/dbTask";
 import { Task } from "../Task/Task";
 import "./KanbanTable.css";
 
+const $ = (filter) => {
+  return dbTask.filter((element) => {
+    return element.action === filter;
+  });
+};
+
 export const KanbanTable = () => {
+  const todoList = $("todo");
+  const inProgressList = $("inProgress");
+  const reviewList = $("review");
+  const doneList = $("done");
   return (
     <div className="KanbanTable">
       <Card titleText="To do" titleColor="white" colorScheme="blue" icon="🗒️">
-        {dbTask.map((element) => {
+        {todoList.map((element) => {
           return (
             <Task
               title={element.title}
@@ -24,7 +34,7 @@ export const KanbanTable = () => {
         colorScheme="orange"
         icon="💻"
       >
-        {dbTask.map((element) => {
+        {inProgressList.map((element) => {
           return (
             <Task
               title={element.title}
@@ -36,7 +46,7 @@ export const KanbanTable = () => {
         })}
       </Card>
       <Card titleText="Review" titleColor="white" colorScheme="purple" icon="🖍">
-        {dbTask.map((element) => {
+        {reviewList.map((element) => {
           return (
             <Task
               title={element.title}
@@ -48,7 +58,7 @@ export const KanbanTable = () => {
         })}
       </Card>
       <Card titleText="Done" titleColor="black" colorScheme="green" icon="🚀">
-        {dbTask.map((element) => {
+        {doneList.map((element) => {
           return (
             <Task
               title={element.title}
