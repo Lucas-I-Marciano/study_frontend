@@ -4,6 +4,7 @@
   position: relative;
   border-radius: 4px;
   box-sizing: border-box;
+  height: fit-content;
 }
 .card__blue {
   background-color: #59b4d1;

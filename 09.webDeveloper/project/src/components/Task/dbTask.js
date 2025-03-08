@@ -14,6 +14,13 @@ export const dbTask = [
     action: "todo",
   },
   {
+    title: "Task 1",
+    label: "bank",
+    colorScheme: "blue",
+    avatarUrl: "male",
+    action: "todo",
+  },
+  {
     title: "Task 2",
     label: "bank",
     colorScheme: "blue",
