@@ -6,7 +6,7 @@ import "./KanbanTable.css";
 export const KanbanTable = () => {
   return (
     <div className="KanbanTable">
-      <Card titleText="To do" titleColor="black" colorScheme="blue" icon="✔️">
+      <Card titleText="To do" titleColor="white" colorScheme="blue" icon="🗒️">
         {dbTask.map((element) => {
           return (
             <Task
@@ -22,8 +22,32 @@ export const KanbanTable = () => {
         titleText="In Progress"
         titleColor="white"
         colorScheme="orange"
-        icon="✔️"
+        icon="💻"
       >
+        {dbTask.map((element) => {
+          return (
+            <Task
+              title={element.title}
+              label={element.label}
+              colorScheme={element.colorScheme}
+              avatarUrl={element.avatarUrl}
+            ></Task>
+          );
+        })}
+      </Card>
+      <Card titleText="Review" titleColor="white" colorScheme="purple" icon="🖍">
+        {dbTask.map((element) => {
+          return (
+            <Task
+              title={element.title}
+              label={element.label}
+              colorScheme={element.colorScheme}
+              avatarUrl={element.avatarUrl}
+            ></Task>
+          );
+        })}
+      </Card>
+      <Card titleText="Done" titleColor="black" colorScheme="green" icon="🚀">
         {dbTask.map((element) => {
           return (
             <Task
