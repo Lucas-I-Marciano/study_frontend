@@ -1,6 +1,7 @@
 import "./App.css";
 import { Card } from "./components/Card/Card";
 import { Header } from "./components/Header/Header";
+import { dbTask } from "./components/Task/dbTask";
 import { Task } from "./components/Task/Task";
 
 function App() {
@@ -9,18 +10,16 @@ function App() {
       <div className="container">
         <Header>Kanban</Header>
         <Card titleText="To do" titleColor="black" colorScheme="blue" icon="✔️">
-          <Task
-            title="Redo Portfolio"
-            label="label"
-            colorScheme="todo"
-            avatarUrl="male"
-          ></Task>
-          <Task
-            title="Task 1"
-            label="label"
-            colorScheme="todo"
-            avatarUrl="male"
-          ></Task>
+          {dbTask.map((element) => {
+            return (
+              <Task
+                title={element.title}
+                label={element.label}
+                colorScheme={element.colorScheme}
+                avatarUrl={element.avatarUrl}
+              ></Task>
+            );
+          })}
         </Card>
       </div>
     </div>
