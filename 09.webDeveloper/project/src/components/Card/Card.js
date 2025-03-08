@@ -8,7 +8,6 @@ export const Card = (props) => {
     colorScheme = "blue",
     icon = "🗒️",
   } = props;
-  console.log(children);
   return (
     <div className={`card card__${colorScheme}`}>
       <div className={`card-shadow card-shadow__${colorScheme}`}></div>
