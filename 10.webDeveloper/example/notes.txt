@@ -1,0 +1,3 @@
+Component will not refresh using javascript variables in a child element, I can re-render using Hook
+Hook of state I import 'import { useState } from "react"'
+To declare -> const [state, setState] = useState(<initial_value>)
