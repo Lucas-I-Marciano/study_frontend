@@ -1,3 +1,12 @@
-Component will not refresh using javascript variables in a child element, I can re-render using Hook
-Hook of state I import 'import { useState } from "react"'
-To declare -> const [state, setState] = useState(<initial_value>)
+Hook
+    Component will not refresh using javascript variables in a child element, I can re-render using Hook
+
+State 
+    Hook of state I import 'import { useState } from "react"'
+    To declare -> const [state, setState] = useState(<initial_value>)
+
+Effect
+    Used to get use of extenal data (api, document.title)
+    Function called directly, expecting two params -> Function and Array
+    Function -> Declare what will change / do
+    Array -> What useEffect will listen of changing to call the function
