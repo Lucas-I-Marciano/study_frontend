@@ -8,7 +8,13 @@ function App() {
   return (
     <div className="App">
       <p>O Botão foi clicado {count} vezes</p>
-      <Button>Meu botão</Button>
+      <Button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        Meu botão
+      </Button>
     </div>
   );
 }
