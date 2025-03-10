@@ -10,3 +10,9 @@ Effect
     Function called directly, expecting two params -> Function and Array
     Function -> Declare what will change / do
     Array -> What useEffect will listen of changing to call the function
+
+Context
+    const <Variable_a> = createContext... -> Create context with one or all values
+    <Variable_a> has .Provider property that will be used on a top level of Component to making the context available for every child of this component.
+        Case Use: <Variable_a.Provider value={<your_value>}> <Component />
+    Inside te <Component/> function, call useContext(<variable_from_create_context>)
