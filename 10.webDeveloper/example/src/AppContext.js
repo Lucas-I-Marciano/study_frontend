@@ -1,17 +1,17 @@
 import { useState, createContext, useContext } from "react";
 import "./AppContext.css";
 
-const Button = ({ children, themeValueButton }) => {
+const Button = ({ children }) => {
   const theme = useContext(ThemeContext);
   return <button className={`${theme}`}>{children}</button>;
 };
 
-const Paragraph = ({ children, themeValueParagraph }) => {
+const Paragraph = ({ children }) => {
   return (
     <p>
       Child: {children}
       <br></br>
-      <Button themeValueButton={themeValueParagraph}>Click</Button>
+      <Button>Click</Button>
     </p>
   );
 };
@@ -24,7 +24,7 @@ const Main = () => {
     <ThemeContext.Provider value={theme}>
       <main>
         <h1>Hello</h1>
-        <Paragraph themeValueParagraph={theme}>This is normal text</Paragraph>
+        <Paragraph>This is normal text</Paragraph>
         <button
           onClick={() => {
             setTheme("a2018");
