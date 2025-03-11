@@ -1,16 +1,16 @@
 import { useState } from "react";
 import "./AppContext.css";
 
-const Button = ({ children }) => {
-  return <button className={`a2017`}>{children}</button>;
+const Button = ({ children, themeValueButton }) => {
+  return <button className={`${themeValueButton}`}>{children}</button>;
 };
 
-const Paragraph = ({ children }) => {
+const Paragraph = ({ children, themeValueParagraph }) => {
   return (
     <p>
       Child: {children}
       <br></br>
-      <Button>Click</Button>
+      <Button themeValueButton={themeValueParagraph}>Click</Button>
     </p>
   );
 };
@@ -20,7 +20,7 @@ const Main = () => {
   return (
     <main>
       <h1>Hello</h1>
-      <Paragraph>This is normal text</Paragraph>
+      <Paragraph themeValueParagraph={theme}>This is normal text</Paragraph>
     </main>
   );
 };
