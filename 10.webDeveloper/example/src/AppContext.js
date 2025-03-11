@@ -1,29 +1,34 @@
-import { Component } from "react";
+import { useState } from "react";
 import "./AppContext.css";
 
-const Button = ({ children, onClick, theme }) => {
-  return <button className={`a${theme}`}>{children}</button>;
+const Button = ({ children }) => {
+  return <button className={`a2017`}>{children}</button>;
 };
 
 const Paragraph = ({ children }) => {
-  return <p>Child: {children}</p>;
+  return (
+    <p>
+      Child: {children}
+      <br></br>
+      <Button>Click</Button>
+    </p>
+  );
 };
 
-const Main = ({ theme }) => {
-  return <main></main>;
+const Main = () => {
+  const [theme, setTheme] = useState("a2017");
+  return (
+    <main>
+      <h1>Hello</h1>
+      <Paragraph>This is normal text</Paragraph>
+    </main>
+  );
 };
 
 function App() {
   return (
     <div className="App">
-      <Component>
-        <Main theme="a2017">
-          <Paragraph>
-            <Button>Hello world 1</Button>
-            <Button>Hello world 2</Button>
-          </Paragraph>
-        </Main>
-      </Component>
+      <Main />
     </div>
   );
 }
