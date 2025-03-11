@@ -21,6 +21,20 @@ const Main = () => {
     <main>
       <h1>Hello</h1>
       <Paragraph themeValueParagraph={theme}>This is normal text</Paragraph>
+      <button
+        onClick={() => {
+          setTheme("a2018");
+        }}
+      >
+        Dark Theme
+      </button>
+      <button
+        onClick={() => {
+          setTheme("a2017");
+        }}
+      >
+        Light Theme
+      </button>
     </main>
   );
 };
