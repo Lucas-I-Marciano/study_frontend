@@ -5,9 +5,20 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [data, setData] = useState(JSON.stringify({}));
 
   useEffect(() => {
-    document.title = count;
+    const query = async () => {
+      try {
+        const response = await (
+          await fetch(`https://jsonplaceholder.typicode.com/users/${count}`)
+        ).json();
+        setData(JSON.stringify(response));
+      } catch (error) {
+        setData(JSON.stringify({ data: "blank" }));
+      }
+    };
+    query();
   }, [count]);
   return (
     <div className="App">
@@ -19,6 +30,7 @@ function App() {
       >
         Meu botão
       </Button>
+      <p>{data}</p>
     </div>
   );
 }
