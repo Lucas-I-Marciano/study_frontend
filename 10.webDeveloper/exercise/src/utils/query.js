@@ -3,6 +3,5 @@ export const query = async (endpoint) => {
     `https://jsonplaceholder.typicode.com/${endpoint}`
   );
   const responseJson = await response.json();
-  console.log(responseJson);
   return responseJson;
 };
