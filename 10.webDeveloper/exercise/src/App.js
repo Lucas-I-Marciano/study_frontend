@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Button } from "./Button/Button";
 import { Card } from "./Card/Card";
@@ -6,6 +6,16 @@ import { query } from "./utils/query";
 
 function App() {
   const [text, setText] = useState("");
+  const [toQuery, setToQuery] = useState("");
+
+  useEffect(() => {
+    const asyncQuery = async () => {
+      const response = await query(toQuery);
+      setText(JSON.stringify(response));
+    };
+    asyncQuery();
+  }, [toQuery]);
+
   return (
     <div className="App">
       <Button
@@ -16,8 +26,7 @@ function App() {
             2: "posts",
           };
           const randomNumber = Math.round(Math.random() * 2);
-          console.log("endpoint: ", toQuery[randomNumber]);
-          setText(JSON.stringify(await query(toQuery[randomNumber])));
+          setToQuery(toQuery[randomNumber]);
         }}
       >
         Click
