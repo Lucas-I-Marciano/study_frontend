@@ -1,8 +1,11 @@
+import { useState } from "react";
 import "./App.css";
 import { Button } from "./Button/Button";
+import { Card } from "./Card/Card";
 import { query } from "./utils/query";
 
 function App() {
+  const [text, setText] = useState("");
   return (
     <div className="App">
       <Button
@@ -14,11 +17,12 @@ function App() {
           };
           const randomNumber = Math.round(Math.random() * 2);
           console.log("endpoint: ", toQuery[randomNumber]);
-          console.log(JSON.stringify(await query(toQuery[randomNumber])));
+          setText(JSON.stringify(await query(toQuery[randomNumber])));
         }}
       >
         Click
       </Button>
+      <Card>{text}</Card>
     </div>
   );
 }
