@@ -6,8 +6,15 @@ function App() {
   return (
     <div className="App">
       <Button
-        onClick={() => {
-          query("users");
+        onClick={async () => {
+          const toQuery = {
+            0: "users",
+            1: "todos",
+            2: "posts",
+          };
+          const randomNumber = Math.round(Math.random() * 2);
+          console.log("endpoint: ", toQuery[randomNumber]);
+          console.log(JSON.stringify(await query(toQuery[randomNumber])));
         }}
       >
         Click
