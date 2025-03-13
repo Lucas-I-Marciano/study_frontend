@@ -5,7 +5,6 @@ export const Box = (props) => {
       {items.map((button) => {
         return <button>{button.name}</button>;
       })}
-      ;
     </div>
   );
 };
