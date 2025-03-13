@@ -51,8 +51,10 @@ const reducer = (state, action) => {
 };
 
 export const BoxProvider = (props) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
-    <BoxContext.Provider value={initialState}>
+    <BoxContext.Provider value={{ state, dispatch }}>
       {props.children}
     </BoxContext.Provider>
   );
