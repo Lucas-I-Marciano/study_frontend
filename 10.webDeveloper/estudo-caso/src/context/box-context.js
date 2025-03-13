@@ -56,8 +56,22 @@ const reducer = (state, action) => {
       };
     }
 
-    case "box-2":
-      return state;
+    case "box-2": {
+      const { buttonId } = action;
+      const buttonObject = state.secondBox.find((buttonElement) => {
+        return buttonElement.id === buttonId;
+      });
+      const newStateFirstBox = [...state.firstBox, buttonObject];
+
+      const newStateSecondBox = state.secondBox.filter((buttonElement) => {
+        return buttonElement.id !== buttonId;
+      });
+
+      return {
+        firstBox: newStateFirstBox,
+        secondBox: newStateSecondBox,
+      };
+    }
     default:
       break;
   }
