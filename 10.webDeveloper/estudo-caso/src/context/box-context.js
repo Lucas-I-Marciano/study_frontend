@@ -39,11 +39,24 @@ export const useBox = () => {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "box-1":
-      console.log("Clicou na box 1");
-      return state;
+    case "box-1": {
+      const { buttonId } = action;
+      const buttonObject = state.firstBox.find((buttonElement) => {
+        return buttonElement.id === buttonId;
+      });
+      const newStateSecondBox = [...state.secondBox, buttonObject];
+
+      const newStateFirstBox = state.firstBox.filter((buttonElement) => {
+        return buttonElement.id !== buttonId;
+      });
+
+      return {
+        firstBox: newStateFirstBox,
+        secondBox: newStateSecondBox,
+      };
+    }
+
     case "box-2":
-      console.log("Clicou na box 2");
       return state;
     default:
       break;
