@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useReducer } from "react";
 
 const initialState = {
   firstBox: [
@@ -35,6 +35,19 @@ export const BoxContext = createContext();
 
 export const useBox = () => {
   return useContext(BoxContext);
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "box-1":
+      console.log("Clicou na box 1");
+      return state;
+    case "box-2":
+      console.log("Clicou na box 2");
+      return state;
+    default:
+      break;
+  }
 };
 
 export const BoxProvider = (props) => {
