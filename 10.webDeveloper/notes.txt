@@ -16,3 +16,15 @@ Context
     <Variable_a> has .Provider property that will be used on a top level of Component to making the context available for every child of this component.
         Case Use: <Variable_a.Provider value={<your_value>}> <Component />
     Inside te <Component/> function, call useContext(<variable_from_create_context>)
+
+useRef
+    Get element A reference and change its behavior on element B -> focus element A by clicking on element B
+
+useCallback
+    Prevent an expensive (related to memory) function to run every component's life cicle 
+
+useMemo
+    Memorize an expensive (related to memory) function value to use on application
+
+useReducer  
+    
