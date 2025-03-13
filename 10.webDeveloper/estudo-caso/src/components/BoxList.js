@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import { Box } from "./Box";
-import { BoxContext } from "../context/box-context";
+import { useBox } from "../context/box-context";
 
 export const BoxList = () => {
-  const boxContext = useContext(BoxContext);
-  console.log(boxContext);
+  const boxContext = useBox();
   // boxContext the Object initialState
   // firstBox: (3) [{…}, {…}, {…}]
   // secondBox: (3) [{…}, {…}, {…}]

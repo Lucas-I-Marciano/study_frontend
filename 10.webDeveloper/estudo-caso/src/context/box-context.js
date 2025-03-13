@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 
 const initialState = {
   firstBox: [
@@ -32,6 +32,10 @@ const initialState = {
 };
 
 export const BoxContext = createContext();
+
+export const useBox = () => {
+  return useContext(BoxContext);
+};
 
 export const BoxProvider = (props) => {
   return (
