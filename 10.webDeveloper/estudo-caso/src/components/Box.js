@@ -9,7 +9,10 @@ export const Box = (props) => {
         return (
           <button
             onClick={() => {
-              boxContext.dispatch({ type: `box-${boxId}` });
+              boxContext.dispatch({
+                type: `box-${boxId}`,
+                buttonId: button.id,
+              });
             }}
           >
             {button.name}
