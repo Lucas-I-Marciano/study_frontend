@@ -8,8 +8,8 @@ export const BoxList = () => {
   // secondBox: (3) [{…}, {…}, {…}]
   return (
     <div className="container">
-      <Box items={boxContext.firstBox}></Box>
-      <Box items={boxContext.secondBox}></Box>
+      <Box boxId="1" items={boxContext.state.firstBox}></Box>
+      <Box boxId="2" items={boxContext.state.secondBox}></Box>
     </div>
   );
 };
