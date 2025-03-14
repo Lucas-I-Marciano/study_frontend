@@ -14,3 +14,7 @@ button {
 button:hover {
   background-color: rgb(59, 0, 59);
 }
+
+.button-list {
+  display: flex;
+}

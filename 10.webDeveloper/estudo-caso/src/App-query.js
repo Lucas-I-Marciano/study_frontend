@@ -4,9 +4,12 @@ import { Button } from "./components/Button";
 function AppQuery() {
   return (
     <div>
-      <Button endpoint="todo">To do</Button>
-      <Button endpoint="users">Users</Button>
-      <Button endpoint="posts">Posts</Button>
+      <div className="button-list">
+        <Button endpoint="todos">To do</Button>
+        <Button endpoint="users">Users</Button>
+        <Button endpoint="posts">Posts</Button>
+        <Button endpoint="posasdts">Posts</Button>
+      </div>
     </div>
   );
 }
