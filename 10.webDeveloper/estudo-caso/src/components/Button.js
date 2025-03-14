@@ -3,7 +3,7 @@ import { fetchData } from "../utils/fetchData";
 
 import { useQuery } from "../context/query-context";
 
-const reducer = (state, action) => {
+const reducer = (_, action) => {
   switch (action.type) {
     case "loading":
       return "loading";
@@ -30,14 +30,19 @@ export const Button = (props) => {
       <button
         onClick={async () => {
           dispatch({ type: "loading" });
-          queryDispath({ type: endpoint });
+          queryDispath({ type: "loading" });
           try {
             const response = await fetchData(endpoint);
+            const firstResponse = response.filter((value, index) => {
+              return index <= 10;
+            });
             setTimeout(() => {
               if (Object.keys(response).length !== 0) {
                 dispatch({ type: "success" });
+                queryDispath({ type: "success", data: firstResponse });
               } else {
                 dispatch({ type: "failed" });
+                queryDispath({ type: "failed" });
               }
             }, 500);
           } catch {
