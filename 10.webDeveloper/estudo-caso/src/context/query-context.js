@@ -1,52 +1,18 @@
 import { createContext, useContext, useReducer } from "react";
-import { fetchData } from "../utils/fetchData";
-
-const initial_state = [
-  {
-    userId: 1,
-    id: 1,
-    title: "delectus aut autem",
-    completed: false,
-  },
-  {
-    userId: 1,
-    id: 2,
-    title: "quis ut nam facilis et officia qui",
-    completed: false,
-  },
-  {
-    userId: 1,
-    id: 3,
-    title: "fugiat veniam minus",
-    completed: false,
-  },
-  {
-    userId: 1,
-    id: 4,
-    title: "et porro tempora",
-    completed: true,
-  },
-  {
-    userId: 1,
-    id: 5,
-    title: "laboriosam mollitia et enim quasi adipisci quia provident illum",
-    completed: false,
-  },
-];
 
 const QueryContext = createContext();
 
 export const QueryProvider = ({ children }) => {
   const reducer = (state, action) => {
     switch (action.type) {
-      case "todos": {
-        return [{ todo: 1 }];
+      case "success": {
+        return action.data;
       }
-      case "users": {
-        return [{ users: 1 }];
+      case "loading": {
+        return [];
       }
-      case "posts": {
-        return [{ posts: 1 }];
+      case "failed": {
+        return [];
       }
 
       default:
@@ -55,7 +21,7 @@ export const QueryProvider = ({ children }) => {
     return state;
   };
 
-  const [query, dispatch] = useReducer(reducer, initial_state);
+  const [query, dispatch] = useReducer(reducer, []);
   return (
     <QueryContext.Provider value={{ result: query, dispatch }}>
       {children}
