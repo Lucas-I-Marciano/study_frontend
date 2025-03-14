@@ -1,4 +1,7 @@
 import { useReducer } from "react";
+import { fetchData } from "../utils/fetchData";
+
+import { useQuery } from "../context/query-context";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,17 +19,10 @@ const reducer = (state, action) => {
   }
 };
 
-const fetchData = async (endpoint) => {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/${endpoint}`
-  );
-  const jsonResponse = await response.json();
-  return jsonResponse;
-
-  // return jsonResponse;
-};
-
 export const Button = (props) => {
+  const query = useQuery();
+  const queryDispath = query.dispatch;
+
   const [state, dispatch] = useReducer(reducer, "idle");
   const { children, endpoint } = props;
   return (
@@ -34,6 +30,7 @@ export const Button = (props) => {
       <button
         onClick={async () => {
           dispatch({ type: "loading" });
+          queryDispath({ type: endpoint });
           try {
             const response = await fetchData(endpoint);
             setTimeout(() => {
