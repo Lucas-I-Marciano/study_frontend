@@ -4,7 +4,7 @@ import { BoxProvider } from "./context/box-context";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <BoxProvider>
         <BoxList></BoxList>
       </BoxProvider>
