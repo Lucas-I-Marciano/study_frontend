@@ -18,19 +18,22 @@ function App() {
     fetchData();
   }, []);
   return (
-    <div className="cards">
-      {shoes.map((element) => {
-        return (
-          <Card
-            imageUrl={element.image}
-            brand={element.brand}
-            currency={element.currency}
-            price={element.price}
-            name={element.name}
-          ></Card>
-        );
-      })}
-    </div>
+    <>
+      <p>HEADER</p>
+      <div className="cards">
+        {shoes.map((element) => {
+          return (
+            <Card
+              imageUrl={element.image}
+              brand={element.brand}
+              currency={element.currency}
+              price={element.price}
+              name={element.name}
+            ></Card>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
