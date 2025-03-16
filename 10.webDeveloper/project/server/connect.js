@@ -7,6 +7,7 @@ const db_string = process.env.ATLAS_URI;
 const client = new MongoClient(db_string);
 
 let shoe;
+let liked_shoe;
 
 export const connectDB = async () => {
   if (!shoe) {
