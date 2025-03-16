@@ -1,8 +1,5 @@
 import { converCurrencySymbol } from "../utils/converCurrencySymbol";
-import { fullfilledStar } from "../utils/star";
 import "./Card.css";
-
-console.log(fullfilledStar(false));
 
 export const Card = (props) => {
   const { imageUrl, brand, currency, price, name, isLiked = false } = props;
