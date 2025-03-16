@@ -1,4 +1,4 @@
-import { converCurrencySymbol } from "../utils/converCurrencySymbol";
+import { converCurrencySymbol } from "../../utils/converCurrencySymbol";
 import "./Card.css";
 
 export const Card = (props) => {
