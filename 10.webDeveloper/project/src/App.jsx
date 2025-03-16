@@ -18,7 +18,7 @@ function App() {
     fetchData();
   }, []);
   return (
-    <div>
+    <div className="cards">
       {shoes.map((element) => {
         return (
           <Card
