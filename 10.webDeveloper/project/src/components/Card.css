@@ -17,3 +17,33 @@
   text-align: right;
   padding: 25px 26px 0 0;
 }
+
+.card-image {
+  width: 260px;
+  height: 160px;
+  padding: 0px 40px;
+  align-items: center;
+}
+
+.card-brand {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 17px;
+}
+
+.card-name {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 17px;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 17px;
+  margin-bottom: 20px;
+}
