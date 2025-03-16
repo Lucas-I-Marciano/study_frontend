@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-
+import { Card } from "./components/Card";
 function App() {
   const [shoes, setShoes] = useState([]);
 
@@ -19,7 +19,17 @@ function App() {
   }, []);
   return (
     <div>
-      <p>{JSON.stringify(shoes)}</p>
+      {shoes.map((element) => {
+        return (
+          <Card
+            imageUrl={element.image}
+            brand={element.brand}
+            currency={element.currency}
+            price={element.price}
+            name={element.name}
+          ></Card>
+        );
+      })}
     </div>
   );
 }
