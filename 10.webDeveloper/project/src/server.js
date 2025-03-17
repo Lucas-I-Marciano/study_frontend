@@ -103,6 +103,34 @@ app.delete("/api/liked/:id", async (req, res) => {
   }
 });
 
+app.patch("/api/liked/:id", async (req, res) => {
+  try {
+    await connectDB();
+    const { id } = req.params;
+    const o_id = new ObjectId(id);
+    const data = await liked_shoe.findOne({ _id: o_id });
+
+    const isLiked = data["is_liked"];
+
+    const filter = { _id: o_id };
+    /* Set the upsert option to insert a document if no documents match
+    the filter */
+    const options = { upsert: false };
+    const updateDoc = {
+      $set: {
+        is_liked: !isLiked,
+      },
+    };
+    // Update the first document that matches the filter
+    const result = await liked_shoe.updateOne(filter, updateDoc, options);
+
+    res.status(200).json(result);
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    res.status(500).json({ erro: `Failed to delete data` });
+  }
+});
+
 app.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`)
 );
