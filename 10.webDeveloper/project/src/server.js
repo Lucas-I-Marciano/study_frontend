@@ -38,6 +38,19 @@ app.post("/api/shoes", async (req, res) => {
   }
 });
 
+app.delete("/api/shoes/:id", async (req, res) => {
+  try {
+    await connectDB();
+    const { id } = req.params;
+    console.log(id);
+    const data = await shoe.deleteOne({ id });
+    res.status(200).json(data);
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    res.status(500).json({ erro: `Failed to delete data` });
+  }
+});
+
 app.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`)
 );
