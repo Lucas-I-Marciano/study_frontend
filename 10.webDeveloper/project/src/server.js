@@ -43,8 +43,7 @@ app.delete("/api/shoes/:id", async (req, res) => {
   try {
     await connectDB();
     const { id } = req.params;
-    console.log(id);
-    const data = await shoe.deleteOne({ id });
+    const data = await shoe.deleteOne({ id: new ObjectId(id) });
     res.status(200).json(data);
   } catch (error) {
     console.error("Failed to fetch data:", error);
@@ -89,6 +88,18 @@ app.post("/api/liked", async (req, res) => {
   } catch (error) {
     console.error("Failed to fetch data:", error);
     res.status(500).json({ erro: `Failed to fetch data` });
+  }
+});
+
+app.delete("/api/liked/:id", async (req, res) => {
+  try {
+    await connectDB();
+    const { id } = req.params;
+    const data = await liked_shoe.deleteOne({ id: new ObjectId(id) });
+    res.status(200).json(data);
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    res.status(500).json({ erro: `Failed to delete data` });
   }
 });
 
