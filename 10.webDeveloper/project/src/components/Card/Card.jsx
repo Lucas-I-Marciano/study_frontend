@@ -3,14 +3,15 @@ import { converCurrencySymbol } from "../../utils/converCurrencySymbol";
 import "./Card.css";
 
 export const Card = (props) => {
-  const { imageUrl, brand, currency, price, name, shoe_id } = props;
+  const { imageUrl, brand, currency, price, name, shoe_id, is_shoe_liked } =
+    props;
 
   const returnStar = (isLiked, shoe_id) => {
     if (isLiked) {
       return (
         <button
           onClick={async () => {
-            console.log(`http://localhost:5000/api/liked/${shoe_id}`);
+            setIsShoeLiked(!isShoeLiked);
             await fetch(`http://localhost:5000/api/liked/${shoe_id}`, {
               method: "PATCH",
             });
@@ -35,7 +36,7 @@ export const Card = (props) => {
     return (
       <button
         onClick={async () => {
-          console.log(`http://localhost:5000/api/liked/${shoe_id}`);
+          setIsShoeLiked(!isShoeLiked);
           await fetch(`http://localhost:5000/api/liked/${shoe_id}`, {
             method: "PATCH",
           });
@@ -59,7 +60,7 @@ export const Card = (props) => {
     );
   };
 
-  const [isShoeLiked, setIsShoeLiked] = useState(false);
+  const [isShoeLiked, setIsShoeLiked] = useState(is_shoe_liked);
 
   useEffect(() => {
     const toQuery = async () => {
@@ -71,7 +72,7 @@ export const Card = (props) => {
       }
     };
     toQuery();
-  });
+  }, []);
 
   return (
     <div className="card">
