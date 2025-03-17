@@ -15,7 +15,26 @@ app.get("/api/shoes", async (req, res) => {
     res.json(data);
   } catch (error) {
     console.error("Failed to fetch data:", error);
-    res.status(500).json({ error: "Failed to fetch data" });
+    res.status(500).json({ erro: `Failed to fetch data` });
+  }
+});
+
+app.post("/api/shoes", async (req, res) => {
+  try {
+    await connectDB();
+    const { created_at, name, brand, price, currency, image } = req.body;
+    const data = await shoe.insertOne({
+      created_at,
+      name,
+      brand,
+      price: parseFloat(price),
+      currency,
+      image,
+    });
+    res.status(200).json(data);
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    res.status(500).json({ erro: `Failed to fetch data` });
   }
 });
 
