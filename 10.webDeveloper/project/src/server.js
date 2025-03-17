@@ -67,7 +67,7 @@ app.get("/api/liked/:id", async (req, res) => {
     await connectDB();
     const { id } = req.params;
     const o_id = new ObjectId(id);
-    const data = await liked_shoe.findOne({ _id: o_id });
+    const data = await liked_shoe.findOne({ shoe_id: o_id });
     res.json(data);
   } catch (error) {
     console.error("Failed to fetch data:", error);
