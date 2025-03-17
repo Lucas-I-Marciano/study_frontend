@@ -3,7 +3,12 @@ import { ListCards } from "./components/ListCards/ListCards";
 function App() {
   return (
     <>
-      <p>HEADER</p>
+      <header className="header">
+        <span className="header-logo">JAXONS</span>
+        <div className="header-highlight">
+          30% Discount on all products till 31st of december
+        </div>
+      </header>
       <ListCards></ListCards>
     </>
   );
