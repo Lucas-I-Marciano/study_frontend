@@ -30,6 +30,7 @@ export const ListCards = () => {
             currency={element.currency}
             price={element.price}
             name={element.name}
+            shoe_id={element._id}
           ></Card>
         );
       })}
