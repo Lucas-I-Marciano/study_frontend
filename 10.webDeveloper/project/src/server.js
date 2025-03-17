@@ -121,14 +121,16 @@ app.patch("/api/liked/:id", async (req, res) => {
     await connectDB();
     const { id } = req.params;
     const o_id = new ObjectId(id);
-    const data = await liked_shoe.findOne({ _id: o_id });
+    const data = await liked_shoe.findOne({ shoe_id: o_id, username: "lucas" });
+
+    console.log("data: ", data);
 
     const isLiked = data["is_liked"];
 
-    const filter = { _id: o_id };
+    const filter = { shoe_id: o_id, username: "lucas" };
     /* Set the upsert option to insert a document if no documents match
     the filter */
-    const options = { upsert: false };
+    const options = { upsert: true };
     const updateDoc = {
       $set: {
         is_liked: !isLiked,
