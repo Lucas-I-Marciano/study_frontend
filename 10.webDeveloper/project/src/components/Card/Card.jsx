@@ -5,10 +5,18 @@ import "./Card.css";
 export const Card = (props) => {
   const { imageUrl, brand, currency, price, name, shoe_id } = props;
 
-  const returnStar = (isLiked) => {
+  const returnStar = (isLiked, shoe_id) => {
     if (isLiked) {
       return (
-        <button className="button-star">
+        <button
+          onClick={async () => {
+            console.log(`http://localhost:5000/api/liked/${shoe_id}`);
+            await fetch(`http://localhost:5000/api/liked/${shoe_id}`, {
+              method: "PATCH",
+            });
+          }}
+          className="button-star"
+        >
           <svg
             width="29"
             height="25"
@@ -25,7 +33,15 @@ export const Card = (props) => {
       );
     }
     return (
-      <button className="button-star">
+      <button
+        onClick={async () => {
+          console.log(`http://localhost:5000/api/liked/${shoe_id}`);
+          await fetch(`http://localhost:5000/api/liked/${shoe_id}`, {
+            method: "PATCH",
+          });
+        }}
+        className="button-star"
+      >
         <svg
           width="29"
           height="25"
@@ -59,7 +75,7 @@ export const Card = (props) => {
 
   return (
     <div className="card">
-      <div className="card-star">{returnStar(isShoeLiked)}</div>
+      <div className="card-star">{returnStar(isShoeLiked, shoe_id)}</div>
       <img className="card-image" src={`/src/assets/images/${imageUrl}`}></img>
       <p className="card-brand">{brand}</p>
       <p className="card-name">{name}</p>
