@@ -1,8 +1,9 @@
+import { useEffect, useState } from "react";
 import { converCurrencySymbol } from "../../utils/converCurrencySymbol";
 import "./Card.css";
 
 export const Card = (props) => {
-  const { imageUrl, brand, currency, price, name, isLiked = false } = props;
+  const { imageUrl, brand, currency, price, name, shoe_id } = props;
 
   const returnStar = (isLiked) => {
     if (isLiked) {
@@ -41,9 +42,24 @@ export const Card = (props) => {
       </button>
     );
   };
+
+  const [isShoeLiked, setIsShoeLiked] = useState(false);
+
+  useEffect(() => {
+    const toQuery = async () => {
+      const result = await fetch(`http://localhost:5000/api/liked/${shoe_id}`);
+      const resultJson = await result.json();
+      const isLikedVariable = resultJson["is_liked"];
+      if (isLikedVariable) {
+        setIsShoeLiked(isLikedVariable);
+      }
+    };
+    toQuery();
+  });
+
   return (
     <div className="card">
-      <div className="card-star">{returnStar(isLiked)}</div>
+      <div className="card-star">{returnStar(isShoeLiked)}</div>
       <img className="card-image" src={`/src/assets/images/${imageUrl}`}></img>
       <p className="card-brand">{brand}</p>
       <p className="card-name">{name}</p>
