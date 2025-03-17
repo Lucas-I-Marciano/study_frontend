@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { connectDB, shoe } from "../server/connect.js";
+import { connectDB, shoe, liked_shoe } from "../server/connect.js";
 
 const app = express();
 const PORT = 5000;
@@ -48,6 +48,17 @@ app.delete("/api/shoes/:id", async (req, res) => {
   } catch (error) {
     console.error("Failed to fetch data:", error);
     res.status(500).json({ erro: `Failed to delete data` });
+  }
+});
+
+app.get("/api/liked", async (req, res) => {
+  try {
+    await connectDB();
+    const data = await liked_shoe.find({}).toArray();
+    res.json(data);
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    res.status(500).json({ erro: `Failed to fetch data` });
   }
 });
 
