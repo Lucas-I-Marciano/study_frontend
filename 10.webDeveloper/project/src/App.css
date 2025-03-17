@@ -12,3 +12,29 @@
 .read-the-docs {
   color: #888;
 }
+
+.header {
+  text-align: left;
+}
+
+.header-logo {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #000000;
+}
+
+.header-highlight {
+  width: 100%;
+  background-color: black;
+  color: white;
+  left: 0;
+  border-radius: 10px;
+
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 18px 0;
+  margin-bottom: 20px;
+}
