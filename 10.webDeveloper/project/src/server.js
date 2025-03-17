@@ -62,6 +62,19 @@ app.get("/api/liked", async (req, res) => {
   }
 });
 
+app.get("/api/liked/:id", async (req, res) => {
+  try {
+    await connectDB();
+    const { id } = req.params;
+    const o_id = new ObjectId(id);
+    const data = await liked_shoe.findOne({ _id: o_id });
+    res.json(data);
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    res.status(500).json({ erro: `Failed to fetch data` });
+  }
+});
+
 app.post("/api/liked", async (req, res) => {
   try {
     await connectDB();
