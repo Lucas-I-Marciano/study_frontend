@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config(); // Carregar variáveis de ambiente
 
+// eslint-disable-next-line no-undef
 const db_string = process.env.ATLAS_URI;
 const client = new MongoClient(db_string);
 
