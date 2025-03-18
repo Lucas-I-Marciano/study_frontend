@@ -32,6 +32,14 @@ app.post("/api/shoes", async (req, res) => {
       currency,
       image,
     });
+
+    await liked_shoe.insertOne({
+      created_at,
+      shoe_id: data["insertedId"],
+      username: "lucas",
+      is_liked: false,
+    });
+
     res.status(200).json(data);
   } catch (error) {
     console.error("Failed to fetch data:", error);
@@ -43,7 +51,8 @@ app.delete("/api/shoes/:id", async (req, res) => {
   try {
     await connectDB();
     const { id } = req.params;
-    const data = await shoe.deleteOne({ id: new ObjectId(id) });
+    const data = await shoe.deleteOne({ _id: new ObjectId(id) });
+    await liked_shoe.deleteOne({ shoe_id: new ObjectId(id) });
     res.status(200).json(data);
   } catch (error) {
     console.error("Failed to fetch data:", error);
@@ -108,7 +117,7 @@ app.delete("/api/liked/:id", async (req, res) => {
   try {
     await connectDB();
     const { id } = req.params;
-    const data = await liked_shoe.deleteOne({ id: new ObjectId(id) });
+    const data = await liked_shoe.deleteOne({ _id: new ObjectId(id) });
     res.status(200).json(data);
   } catch (error) {
     console.error("Failed to fetch data:", error);
