@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  height: 100vh;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: antiquewhite;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+}
+
+button {
+  border: none;
+  margin-bottom: 5px;
+  background-color: darkmagenta;
+  color: white;
+  padding: 10px;
+  min-width: 100px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+}
+
+button:hover {
+  background-color: rgb(59, 0, 59);
+}

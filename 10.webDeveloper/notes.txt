@@ -1,0 +1,30 @@
+Hook
+    Component will not refresh using javascript variables in a child element, I can re-render using Hook
+
+State 
+    Hook of state I import 'import { useState } from "react"'
+    To declare -> const [state, setState] = useState(<initial_value>)
+
+Effect
+    Used to get use of extenal data (api, document.title)
+    Function called directly, expecting two params -> Function and Array
+    Function -> Declare what will change / do
+    Array -> What useEffect will listen of changing to call the function
+
+Context
+    const <Variable_a> = createContext... -> Create context with one or all values
+    <Variable_a> has .Provider property that will be used on a top level of Component to making the context available for every child of this component.
+        Case Use: <Variable_a.Provider value={<your_value>}> <Component />
+    Inside te <Component/> function, call useContext(<variable_from_create_context>)
+
+useRef
+    Get element A reference and change its behavior on element B -> focus element A by clicking on element B
+
+useCallback
+    Prevent an expensive (related to memory) function to run every component's life cicle 
+
+useMemo
+    Memorize an expensive (related to memory) function value to use on application
+
+useReducer  
+    
