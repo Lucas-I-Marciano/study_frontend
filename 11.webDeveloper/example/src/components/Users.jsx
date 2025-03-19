@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { listUser, listUsers } from "../services/user";
-import { useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 
 export const Users = ({ numUsers }) => {
   const [users, setUsers] = useState([]);
@@ -13,7 +13,9 @@ export const Users = ({ numUsers }) => {
   }, []);
   return (
     <div className="users">
-      <h1>Users:</h1>
+      <NavLink to="/users">
+        <h1>Users:</h1>
+      </NavLink>
       {users.slice(0, numUsers).map((user) => {
         return <p>{user.name}</p>;
       })}
@@ -34,7 +36,7 @@ export const User = () => {
   }, [id]);
   return (
     <div className="user">
-      <h1>Users:</h1>
+      <h1>User:</h1>
       {Object.keys(user).map((information) => {
         return (
           <>

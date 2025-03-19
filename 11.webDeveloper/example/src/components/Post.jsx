@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { listPosts } from "../services/post";
+import { NavLink } from "react-router";
 
 export const Post = ({ numPosts }) => {
   const [posts, setPosts] = useState([]);
@@ -13,7 +14,9 @@ export const Post = ({ numPosts }) => {
 
   return (
     <div className="post">
-      <h1>Posts:</h1>
+      <NavLink to="/posts">
+        <h1>Posts:</h1>
+      </NavLink>
       {posts.slice(0, numPosts).map((post) => {
         return <p>{post.title}</p>;
       })}
