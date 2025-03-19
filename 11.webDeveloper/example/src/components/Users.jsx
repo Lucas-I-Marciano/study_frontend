@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import { listUsers } from "../services/user";
-
-listUsers;
+import { listUser, listUsers } from "../services/user";
 
 export const Users = ({ numUsers }) => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const response = async () => {
-      const { data } = await listUsers();
+      const { data } = await listUsers(1);
       setUsers(data);
     };
     response();
@@ -17,6 +15,31 @@ export const Users = ({ numUsers }) => {
       <h1>Users:</h1>
       {users.slice(0, numUsers).map((user) => {
         return <p>{user.name}</p>;
+      })}
+    </div>
+  );
+};
+
+export const User = ({ userId }) => {
+  const [user, setUsers] = useState([]);
+  useEffect(() => {
+    const response = async () => {
+      const { data } = await listUser(userId);
+      setUsers(data);
+    };
+    response();
+  }, []);
+  return (
+    <div className="user">
+      <h1>Users:</h1>
+      {Object.keys(user).map((information) => {
+        return (
+          <>
+            <span>{information}: </span>
+            <span>{JSON.stringify(user[information])}</span>
+            <br></br>
+          </>
+        );
       })}
     </div>
   );
