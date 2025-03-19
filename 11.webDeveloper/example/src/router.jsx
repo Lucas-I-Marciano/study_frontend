@@ -7,31 +7,19 @@ import { createBrowserRouter, useParams } from "react-router";
 const routes = [
   {
     path: "/",
-    Component: () => {
-      return (
-        <>
-          <DefaultPath />
-        </>
-      );
-    },
+    element: <DefaultPath />,
   },
   {
     path: "/users",
-    Component: () => {
-      return <Users numUsers={5} />;
-    },
+    element: <Users numUsers={5} />,
   },
   {
     path: "/posts",
-    Component: () => {
-      return <Post numPosts={5} />;
-    },
+    element: <Post numPosts={5} />,
   },
   {
     path: "/todos",
-    Component: () => {
-      return <Todos numTodos={5} />;
-    },
+    element: <Todos numTodos={5} />,
   },
   {
     path: "users/:id",
