@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { listUser, listUsers } from "../services/user";
 import { NavLink, useParams } from "react-router";
 import { useCustomSearchParams } from "../hooks/useCustomSearchParams";
+import { listPostsUser } from "../services/post";
 
 export const Users = () => {
   const [users, setUsers] = useState([]);
@@ -34,16 +35,27 @@ export const Users = () => {
 export const User = () => {
   const { id } = useParams();
   const [user, setUsers] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const response = async () => {
       const { data } = await listUser(id);
       setUsers(data);
     };
+
+    const getPostsUser = async () => {
+      const { data } = await listPostsUser(`?userId=${id}`);
+      setPosts(data);
+    };
+
     response();
+    getPostsUser();
   }, [id]);
   return (
     <div className="user">
+      <NavLink to="/users">
+        <p>Back</p>
+      </NavLink>
       <h1>User:</h1>
       {Object.keys(user).map((information) => {
         return (
@@ -54,9 +66,20 @@ export const User = () => {
           </>
         );
       })}
-      <NavLink to="/users">
-        <p>Back</p>
-      </NavLink>
+
+      <div className="user-posts">
+        <h3>Posts of {user.name}</h3>
+        {posts.map((post, index) => {
+          return (
+            <>
+              <h5>
+                {index + 1}. {post.title}
+              </h5>
+              <p>{post.body}</p>
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 };
