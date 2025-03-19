@@ -1,21 +1,10 @@
 import "./App.css";
 
-import DefaultPath from "./components/DefaultPath";
+import routerPath from "./router";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
 
-let router = createBrowserRouter([
-  {
-    path: "/",
-    Component: () => {
-      return (
-        <>
-          <DefaultPath />
-        </>
-      );
-    },
-  },
-]);
+let router = createBrowserRouter(routerPath);
 
 function App() {
   return (
