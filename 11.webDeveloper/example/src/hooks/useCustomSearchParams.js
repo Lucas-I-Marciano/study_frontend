@@ -1,11 +1,10 @@
-import { useLocation } from "react-router";
+import { useSearchParams } from "react-router";
 
 export const useCustomSearchParams = (defaultMax = 10, defaultOffset = 0) => {
-  const { search } = useLocation();
-  const urlSearchParam = new URLSearchParams(search);
+  const [searchParams] = useSearchParams();
 
-  const max = parseInt(urlSearchParam.get("max")) || defaultMax;
-  const offset = parseInt(urlSearchParam.get("offset")) || defaultOffset;
+  const max = parseInt(searchParams.get("max")) || defaultMax;
+  const offset = parseInt(searchParams.get("offset")) || defaultOffset;
 
   return {
     max,
