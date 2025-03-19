@@ -17,7 +17,11 @@ export const Users = ({ numUsers }) => {
         <h1>Users:</h1>
       </NavLink>
       {users.slice(0, numUsers).map((user) => {
-        return <p>{user.name}</p>;
+        return (
+          <NavLink to={`/users/${user.id}`}>
+            <p>{user.name}</p>
+          </NavLink>
+        );
       })}
     </div>
   );
@@ -46,6 +50,9 @@ export const User = () => {
           </>
         );
       })}
+      <NavLink to="/users">
+        <p>Back</p>
+      </NavLink>
     </div>
   );
 };
