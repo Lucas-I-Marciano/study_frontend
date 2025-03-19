@@ -2,9 +2,9 @@ import DefaultPath from "./components/DefaultPath";
 import { Post } from "./components/Post";
 import { Todos } from "./components/Todos";
 import { Users, User } from "./components/Users";
-import { useParams } from "react-router";
+import { createBrowserRouter, useParams } from "react-router";
 
-export default [
+const routes = [
   {
     path: "/",
     Component: () => {
@@ -41,3 +41,7 @@ export default [
     },
   },
 ];
+
+const router = createBrowserRouter(routes);
+
+export default router;

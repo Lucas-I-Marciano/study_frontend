@@ -1,10 +1,7 @@
 import "./App.css";
 
-import routerPath from "./router";
-
-import { createBrowserRouter, RouterProvider } from "react-router";
-
-let router = createBrowserRouter(routerPath);
+import { RouterProvider } from "react-router";
+import router from "./router";
 
 function App() {
   return (
