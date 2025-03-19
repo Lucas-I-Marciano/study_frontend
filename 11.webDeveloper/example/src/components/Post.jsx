@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { listPosts } from "../services/post";
-import { NavLink, useLocation } from "react-router";
+import { NavLink } from "react-router";
+import { useCustomSearchParams } from "../hooks/useCustomSearchParams";
 
 export const Post = () => {
   const [posts, setPosts] = useState([]);
@@ -12,20 +13,14 @@ export const Post = () => {
     response();
   }, []);
 
-  const { search } = useLocation();
-  const urlSearchParam = new URLSearchParams(search);
-  const max = parseInt(urlSearchParam.get("max"));
-  const offset = parseInt(urlSearchParam.get("offset"));
-
-  const maxElement = max ? max : 10;
-  const offsetElement = offset ? offset : 0;
+  const { max, offset } = useCustomSearchParams();
 
   return (
     <div className="post">
       <NavLink to="/posts">
         <h1>Posts:</h1>
       </NavLink>
-      {posts.slice(offsetElement, offsetElement + maxElement).map((post) => {
+      {posts.slice(offset, offset + max).map((post) => {
         return <p>{post.title}</p>;
       })}
     </div>

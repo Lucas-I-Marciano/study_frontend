@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { listUser, listUsers } from "../services/user";
-import { NavLink, useLocation, useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
+import { useCustomSearchParams } from "../hooks/useCustomSearchParams";
 
 export const Users = () => {
   const [users, setUsers] = useState([]);
@@ -12,20 +13,14 @@ export const Users = () => {
     response();
   }, []);
 
-  const { search } = useLocation();
-  const urlSearchParam = new URLSearchParams(search);
-  const max = parseInt(urlSearchParam.get("max"));
-  const offset = parseInt(urlSearchParam.get("offset"));
-
-  const maxElement = max ? max : 10;
-  const offsetElement = offset ? offset : 0;
+  const { max, offset } = useCustomSearchParams();
 
   return (
     <div className="users">
       <NavLink to="/users">
         <h1>Users:</h1>
       </NavLink>
-      {users.slice(offsetElement, offsetElement + maxElement).map((user) => {
+      {users.slice(offset, offset + max).map((user) => {
         return (
           <NavLink to={`/users/${user.id}`}>
             <p>{user.name}</p>
