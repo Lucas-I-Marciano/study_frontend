@@ -6,6 +6,7 @@ import { listTodos } from "./services/todo";
 
 import { Post } from "./components/Post";
 import { Users } from "./components/Users";
+import { Todos } from "./components/Todos";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -41,10 +42,7 @@ function App() {
     <>
       <Post posts={posts} numPosts={4}></Post>
       <Users users={users} numUsers={4}></Users>
-      <h1>To do:</h1>
-      {todos.slice(0, 10).map((todo) => {
-        return <p>{todo.title}</p>;
-      })}
+      <Todos todos={todos} numTodos={4}></Todos>
     </>
   );
 }
