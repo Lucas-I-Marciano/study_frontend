@@ -1,7 +1,9 @@
 import DefaultPath from "./components/DefaultPath";
 import { Post } from "./components/Post";
 import { Todos } from "./components/Todos";
-import { Users } from "./components/Users";
+import { Users, User } from "./components/Users";
+
+let userId;
 
 export default [
   {
@@ -30,6 +32,15 @@ export default [
     path: "/todos",
     Component: () => {
       return <Todos numTodos={5} />;
+    },
+  },
+  {
+    path: "users/:id",
+    loader: ({ params }) => {
+      userId = params["id"];
+    },
+    Component: () => {
+      return <User userId={userId} />;
     },
   },
 ];
