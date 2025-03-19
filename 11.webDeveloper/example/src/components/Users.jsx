@@ -1,4 +1,17 @@
-export const Users = ({ users, numUsers }) => {
+import { useEffect, useState } from "react";
+import { listUsers } from "../services/user";
+
+listUsers;
+
+export const Users = ({ numUsers }) => {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    const response = async () => {
+      const { data } = await listUsers();
+      setUsers(data);
+    };
+    response();
+  }, []);
   return (
     <div className="users">
       <h1>Users:</h1>
