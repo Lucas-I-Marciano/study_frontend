@@ -6,7 +6,7 @@ export const Users = ({ numUsers }) => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const response = async () => {
-      const { data } = await listUsers(1);
+      const { data } = await listUsers();
       setUsers(data);
     };
     response();
@@ -31,7 +31,7 @@ export const User = () => {
       setUsers(data);
     };
     response();
-  }, []);
+  }, [id]);
   return (
     <div className="user">
       <h1>Users:</h1>
