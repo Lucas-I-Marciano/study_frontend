@@ -2,7 +2,7 @@ import DefaultPath from "./components/DefaultPath";
 import { Post } from "./components/Post";
 import { Todos } from "./components/Todos";
 import { Users, User } from "./components/Users";
-import { createBrowserRouter, useParams } from "react-router";
+import { createBrowserRouter } from "react-router";
 
 const routes = [
   {
@@ -23,10 +23,7 @@ const routes = [
   },
   {
     path: "users/:id",
-    Component: () => {
-      const { id } = useParams();
-      return <User userId={id} />;
-    },
+    element: <User />,
   },
 ];
 

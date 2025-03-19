@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { listUser, listUsers } from "../services/user";
+import { useParams } from "react-router";
 
 export const Users = ({ numUsers }) => {
   const [users, setUsers] = useState([]);
@@ -20,11 +21,13 @@ export const Users = ({ numUsers }) => {
   );
 };
 
-export const User = ({ userId }) => {
+export const User = () => {
+  const { id } = useParams();
   const [user, setUsers] = useState([]);
+
   useEffect(() => {
     const response = async () => {
-      const { data } = await listUser(userId);
+      const { data } = await listUser(id);
       setUsers(data);
     };
     response();
