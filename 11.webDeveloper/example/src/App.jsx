@@ -1,8 +1,6 @@
 import "./App.css";
 
-import { Post } from "./components/Post";
-import { Users } from "./components/Users";
-import { Todos } from "./components/Todos";
+import DefaultPath from "./components/DefaultPath";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
 
@@ -12,9 +10,7 @@ let router = createBrowserRouter([
     Component: () => {
       return (
         <>
-          <Post numPosts={3} />
-          <Users numUsers={3} />
-          <Todos numTodos={3} />
+          <DefaultPath />
         </>
       );
     },
