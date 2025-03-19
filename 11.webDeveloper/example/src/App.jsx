@@ -41,10 +41,6 @@ function App() {
     <>
       <Post posts={posts} numPosts={4}></Post>
       <Users users={users} numUsers={4}></Users>
-      <h1>User:</h1>
-      {users.slice(0, 10).map((user) => {
-        return <p>{user.name}</p>;
-      })}
       <h1>To do:</h1>
       {todos.slice(0, 10).map((todo) => {
         return <p>{todo.title}</p>;
