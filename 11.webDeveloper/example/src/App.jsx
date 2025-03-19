@@ -4,6 +4,8 @@ import { listPosts } from "./services/post";
 import { listUsers } from "./services/user";
 import { listTodos } from "./services/todo";
 
+import { User } from "./components/Users";
+
 function App() {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
@@ -36,18 +38,17 @@ function App() {
 
   return (
     <>
-      <h1>Posts:</h1>
-      {posts.slice(0, 10).map((post) => {
-        return <p>{post.title}</p>;
-      })}
-      <h1>User:</h1>
-      {users.slice(0, 10).map((user) => {
-        return <p>{user.name}</p>;
-      })}
-      <h1>To do:</h1>
-      {todos.slice(0, 10).map((todo) => {
-        return <p>{todo.title}</p>;
-      })}
+      <BrowserRouter>
+        <User posts={posts}></User>
+        <h1>User:</h1>
+        {users.slice(0, 10).map((user) => {
+          return <p>{user.name}</p>;
+        })}
+        <h1>To do:</h1>
+        {todos.slice(0, 10).map((todo) => {
+          return <p>{todo.title}</p>;
+        })}
+      </BrowserRouter>
     </>
   );
 }
