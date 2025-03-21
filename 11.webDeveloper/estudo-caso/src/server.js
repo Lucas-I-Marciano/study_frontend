@@ -1,12 +1,14 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 const app = express();
 const PORT = 3000;
 const SECRET_KEY = "your_secret_key"; // Substitua por uma chave secreta segura
 
 app.use(bodyParser.json());
+app.use(cors()); // Para permitir requisições do frontend
 
 app.post("/login", (req, res) => {
   const { email } = req.body;
