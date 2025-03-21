@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { authService } from "../services/auth";
 
@@ -13,11 +14,15 @@ export const Login = () => {
       }
     }
   };
+  const navigate = useNavigate();
   useEffect(() => {
     const toQuery = async () => {
       const response = await authService({ email: email });
       const toStorage = response.data?.token ? response.data.token : "";
       localStorage.setItem("userToken", toStorage);
+      if (toStorage) {
+        navigate("/");
+      }
     };
     if (email && email !== null) {
       toQuery();
