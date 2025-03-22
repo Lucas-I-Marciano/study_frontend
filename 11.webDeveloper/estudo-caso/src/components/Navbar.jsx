@@ -1,5 +1,9 @@
 import { NavLink } from "react-router";
 
+const handleLogout = () => {
+  localStorage.setItem("userToken", "");
+};
+
 export const Navbar = () => {
   return (
     <div>
@@ -11,6 +15,7 @@ export const Navbar = () => {
         <li>
           <NavLink to="/private">Private</NavLink>
         </li>
+        <button onClick={handleLogout}>Logout</button>
       </ul>
     </div>
   );
