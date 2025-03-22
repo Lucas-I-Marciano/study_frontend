@@ -4,6 +4,7 @@ import { Login } from "../components/Login";
 import { ProtectPage } from "../components/ProtectPage";
 import { PublicPage } from "../components/PublicPage";
 import { Layout } from "../components/Layout";
+import { NeedAuth } from "../components/NeedAuth";
 
 const routes = [
   {
@@ -16,7 +17,11 @@ const routes = [
       },
       {
         path: "/private",
-        element: <ProtectPage />,
+        element: (
+          <NeedAuth>
+            <ProtectPage />
+          </NeedAuth>
+        ),
       },
       {
         path: "/public",
