@@ -1,11 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getGeneral } from "../services/general";
 
 export const PublicPage = () => {
+  const [text, setText] = useState("");
   useEffect(() => {
     const toQuery = async () => {
       const response = await getGeneral();
-      console.log("response", response);
+      setText(response.data.message);
     };
     toQuery();
   });
@@ -13,6 +14,7 @@ export const PublicPage = () => {
   return (
     <div>
       <h1>PublicPage</h1>
+      <p>{text}</p>
     </div>
   );
 };
