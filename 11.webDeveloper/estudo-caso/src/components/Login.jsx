@@ -1,10 +1,25 @@
 import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { authService } from "../services/auth";
+import { jwtDecode } from "jwt-decode";
 
 export const Login = () => {
   const [email, setEmail] = useState(null);
 
+  const userToken = localStorage.getItem("userToken");
+  const navigate = useNavigate();
+
+  try {
+    if (userToken | (userToken == null)) {
+      throw Error;
+    }
+    jwtDecode(userToken);
+    useEffect(() => {
+      navigate("/");
+    }, []);
+  } catch {
+    console.log("");
+  }
   const submitEvent = (event) => {
     event.preventDefault();
     var data = new FormData(event.target);
@@ -14,7 +29,7 @@ export const Login = () => {
       }
     }
   };
-  const navigate = useNavigate();
+
   useEffect(() => {
     const toQuery = async () => {
       const response = await authService({ email: email });
