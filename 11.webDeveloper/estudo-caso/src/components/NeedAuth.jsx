@@ -6,7 +6,6 @@ export const NeedAuth = ({ children }) => {
   const navigate = useNavigate();
 
   const userToken = localStorage.getItem("userToken");
-  console.log("userToken: ", userToken);
   try {
     if (userToken | (userToken == null)) {
       throw Error;
