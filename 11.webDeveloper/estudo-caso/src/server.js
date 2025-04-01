@@ -10,13 +10,24 @@ const SECRET_KEY = "your_secret_key"; // Substitua por uma chave secreta segura
 app.use(bodyParser.json());
 app.use(cors()); // Para permitir requisições do frontend
 
+const fake_db = [
+  {
+    email : "asd@asd.com",
+    username: "username",
+    password: "asd",
+    age: 26
+  }
+]
+
 app.post("/login", (req, res) => {
   const { email } = req.body;
 
+
   // Verifique se o email é "asd@asd.com"
   if (email === "asd@asd.com") {
+    const user = fake_db.find((user)=>{return user.email = email})
     // Gere um token JWT com o email
-    const token = jwt.sign({ email }, SECRET_KEY, { expiresIn: "1h" });
+    const token = jwt.sign(user, SECRET_KEY, { expiresIn: "1h" });
 
     // Retorne o token
     return res.json({ token });
