@@ -2,8 +2,11 @@ import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { authService } from "../services/auth";
 import { handleToken } from "../utils/handleToken";
+import { useAuth } from "../context/AuthC";
+import { jwtDecode } from "jwt-decode";
 
 export const Login = () => {
+  const auth = useAuth();
   const [email, setEmail] = useState(null);
   const navigate = useNavigate();
 
@@ -26,9 +29,10 @@ export const Login = () => {
     const toQuery = async () => {
       const response = await authService({ email: email });
       const toStorage = response.data?.token ? response.data.token : "";
+      auth.setUser(jwtDecode(toStorage).username)
       localStorage.setItem("userToken", toStorage);
       if (toStorage) {
-        navigate("/");
+        navigate("/private");
       }
     };
     if (email && email !== null) {
