@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 
+import { root } from './services/auth'
+import { useState } from 'react'
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [testRoot, setTestRoot] = useState("")
+
+  useEffect(()=>{
+    const toQuery = async ()=>{
+      const response = await root()
+      setTestRoot(response.message)
+    }
+    toQuery()
+  },[])
 
   return (
     <>
-      <p>Hello World</p>
+      <p className='bg-red-500'>{testRoot}</p>
     </>
   )
 }
