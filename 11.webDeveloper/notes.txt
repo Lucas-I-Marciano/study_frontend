@@ -1,0 +1,7 @@
+Life cicly of a component
+    Mounting, Updating, and Unmounting
+
+URL Param | Search Param
+    localhost:8000/posts/software?filter=12
+        'software' is a url param because the code need this on its route
+        'filter=12' is a query/search param -> after ?
