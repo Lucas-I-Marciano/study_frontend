@@ -1,3 +1,4 @@
+import { useParams } from "react-router"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
@@ -11,19 +12,35 @@ const schema = yup.object({
 
 let carId = 0
 const createCar = (id, data) => localStorage.setItem(`car-${id}`, JSON.stringify(data))
-const getCar = id => localStorage.getItem(`car-${id}`)
+const getCar = id => {
+    return localStorage.getItem(`car-${id}`)
+}
 const createId = () => {
     carId++
     return carId
 }
 
 export const Form = () => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
-    console.log(errors)
+    const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
+    const { id } = useParams()
+    if (id) {
+        const car = JSON.parse(getCar(id))
+        if (!car) {
+            return <h2 className="text-xl text-grey-600 m-5">Car not founded!</h2>
+        }
+        Object.entries(car).forEach(([key, value]) => {
+            setValue(key, value)
+        })
+
+
+    }
+
     const onSubmitFunction = (data) => {
-        createCar(createId(carId), data)
+        const createdId = id ? id : createId(carId)
+        createCar(createdId, data)
         reset()
     }
+
 
 
     return (<form className="flex flex-col p-5" onSubmit={handleSubmit(onSubmitFunction)}>
