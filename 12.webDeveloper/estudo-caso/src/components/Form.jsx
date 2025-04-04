@@ -4,7 +4,7 @@ import * as yup from "yup"
 
 const schema = yup.object({
     name: yup.string().required("Car's name required"),
-    brand: yup.string().min(1).required("Car's brand required"),
+    brand: yup.string().min(1, "Car's brand required").required("Car's brand required"),
     color: yup.string().required("Car's color required"),
     type: yup.string().required("Car's type required"),
 }).required()
@@ -22,6 +22,7 @@ export const Form = () => {
         <label className="mb-4">
             Car's name
             <input className="ml-2 bg-blue-200  rounded-md" {...register("name")}></input>
+            {errors.name ? <span className="text-red-500 ml-1 text-xs">{errors.name.message}</span> : ""}
         </label>
         <label className="mb-4">
             Car`s brand
@@ -32,14 +33,17 @@ export const Form = () => {
                 <option value="chevrolet">Chevrolet</option>
                 <option value="ford">Ford</option>
             </select>
+            {errors.brand ? <span className="text-red-500 ml-1 text-xs">{errors.brand.message}</span> : ""}
         </label>
         <label className="mb-4">
             Car's color
             <input {...register("color")} className="ml-2 bg-blue-200  rounded-md"></input>
+            {errors.color ? <span className="text-red-500 ml-1 text-xs">{errors.color.message}</span> : ""}
         </label>
         <label className="mb-4">
             Car's type
             <input {...register("type")} className="ml-2 bg-blue-200  rounded-md"></input>
+            {errors.type ? <span className="text-red-500 ml-1 text-xs">{errors.type.message}</span> : ""}
         </label>
         <button type="submit" className="w-20 bg-blue-100 rounded-md p-2 hover:bg-sky-700 hover:text-white"> Send! </button>
     </form>)
