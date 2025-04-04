@@ -10,11 +10,20 @@ const schema = yup.object({
 }).required()
 
 let carId = 0
+const createCar = (id, data) => localStorage.setItem(`car-${id}`, JSON.stringify(data))
+const getCar = id => localStorage.getItem(`car-${id}`)
+const createId = () => {
+    carId++
+    return carId
+}
 
 export const Form = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
+    const { register, handleSubmit, reset, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
     console.log(errors)
-    const onSubmitFunction = (data) => console.log(data);
+    const onSubmitFunction = (data) => {
+        createCar(createId(carId), data)
+        reset()
+    }
 
 
     return (<form className="flex flex-col p-5" onSubmit={handleSubmit(onSubmitFunction)}>
