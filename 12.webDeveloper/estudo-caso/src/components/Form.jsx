@@ -2,6 +2,7 @@ import { useParams } from "react-router"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import { toast } from 'react-toastify';
 
 const schema = yup.object({
     name: yup.string().required("Car's name required"),
@@ -37,7 +38,8 @@ export const Form = () => {
 
     const onSubmitFunction = (data) => {
         const createdId = id ? id : createId(carId)
-        createCar(createdId, data)
+        createCar(createdId, data);
+        toast('Car created!');
         reset()
     }
 
