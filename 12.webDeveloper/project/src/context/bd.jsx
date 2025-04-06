@@ -18,12 +18,12 @@ const db = {
         currency: "BRL",
         measure: "KG",
     },
-    avocato: {
+    avocado: {
         price: 5,
         currency: "BRL",
         measure: "UN",
     },
-    Mango: {
+    mango: {
         price: 6,
         currency: "BRL",
         measure: "UN",
