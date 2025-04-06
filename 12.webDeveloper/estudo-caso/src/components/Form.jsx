@@ -2,7 +2,7 @@ import { useParams } from "react-router"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 const schema = yup.object({
     name: yup.string().required("Car's name required"),
@@ -27,7 +27,11 @@ export const Form = () => {
     if (id) {
         const car = JSON.parse(getCar(id))
         if (!car) {
-            return <h2 className="text-xl text-grey-600 m-5">Car not founded!</h2>
+            toast.warning("Car not founded!")
+            return <>
+                <h2 className="text-xl text-grey-600 m-5">Car not founded!</h2>
+                <ToastContainer />
+            </>
         }
         Object.entries(car).forEach(([key, value]) => {
             setValue(key, value)
