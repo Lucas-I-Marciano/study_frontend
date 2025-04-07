@@ -10,6 +10,13 @@ export const Product = ({ currency, price, title, description, image, measure })
 
     }
 
+    const removeItem = (item) => {
+        const valueBefore = cart[item]['quantity']
+        const addedValue = valueBefore - 1
+        setCart({ ...cart, [item]: { ...cart[item], quantity: addedValue } });
+
+    }
+
     const ButtonAddCartDefault = () => {
 
         return <button onClick={() => { addItem(title) }} className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 flex items-center">
@@ -21,7 +28,13 @@ export const Product = ({ currency, price, title, description, image, measure })
     }
 
     const ButtonAddMore = () => {
-        return <div className="border-red-700 border-solid rounded-sm"><button className="bg-red-100 px-3.5 rounded-md text-lg mr-1">-</button> <span>1</span> <button className="bg-green-100 px-3 rounded-md text-lg ml-1">+</button></div>
+        return (
+            <div className="border-red-700 border-solid rounded-sm">
+                <button onClick={() => { removeItem(title) }} className="bg-red-100 px-3.5 rounded-md text-lg mr-1">-</button>
+                <span>{cart[title]['quantity']}</span>
+                <button onClick={() => { addItem(title) }} className="bg-green-100 px-3 rounded-md text-lg ml-1">+</button>
+            </div>
+        )
 
     }
 
