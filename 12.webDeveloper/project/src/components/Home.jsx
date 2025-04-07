@@ -17,7 +17,8 @@ export const Home = () => {
                 price={handleBd.mockDb[element].price}
                 title={element}
                 description={handleBd.mockDb[element].description}
-                image={allImages[element]} />
+                image={allImages[element]}
+                measure={handleBd.mockDb[element].measure} />
         })}
     </>)
 }
