@@ -9,7 +9,7 @@ export const Products = () => {
     const allProducts = Object.keys(handleBd.mockDb)
 
     return (
-        <div>
+        <div className="flex flex-wrap">
             {allProducts.map(element => {
                 return <Product
                     currency={handleBd.mockDb[element].currency}
