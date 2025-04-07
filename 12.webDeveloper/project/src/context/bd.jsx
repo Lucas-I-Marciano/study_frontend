@@ -47,7 +47,8 @@ entries.forEach(([key, value]) => {
 export const BdContextProvider = ({ children }) => {
     const [mockDb, setMockDb] = useState(db)
     const [cart, setCart] = useState(handleCart)
-    return <BdContext.Provider value={{ mockDb, setMockDb, cart, setCart }}>{children}</BdContext.Provider>
+    const [total, setTotal] = useState(0)
+    return <BdContext.Provider value={{ mockDb, setMockDb, cart, setCart, total, setTotal }}>{children}</BdContext.Provider>
 }
 
 export const useBdContext = () => {
