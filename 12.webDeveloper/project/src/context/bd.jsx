@@ -35,9 +35,19 @@ const db = {
     },
 }
 
+const handleCart = {}
+
+const entries = Object.entries(db)
+entries.forEach(([key, value]) => {
+    const { price, measure } = value
+    handleCart[key] = { price, measure, quantity: 0 }
+})
+
+
 export const BdContextProvider = ({ children }) => {
     const [mockDb, setMockDb] = useState(db)
-    return <BdContext.Provider value={{ mockDb, setMockDb }}>{children}</BdContext.Provider>
+    const [cart, setCart] = useState(handleCart)
+    return <BdContext.Provider value={{ mockDb, setMockDb, cart, setCart }}>{children}</BdContext.Provider>
 }
 
 export const useBdContext = () => {
