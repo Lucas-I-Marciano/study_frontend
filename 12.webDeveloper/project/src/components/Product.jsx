@@ -1,7 +1,7 @@
 export const Product = ({ currency, price, title, description, image, measure }) => {
     return (
         <>
-            <div className="w-70 flex flex-col items-center p-5 shadow-2xl m-4 rounded-2xl">
+            <div className="w-70 flex flex-col items-center p-5 shadow-2xl m-4 rounded-2xl justify-between">
                 <div>
                     <img className="w-35 pb-1" src={image} />
                 </div>
