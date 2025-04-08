@@ -10,7 +10,8 @@ export const CartTable = () => {
     const entries = Object.entries(cart)
 
     return (<>
-        <div>
+        <div className="flex flex-col items-center">
+            <h1 className="text-3xl text-blue-700 font-serif text-shadow-4  xs">Marciano's Store!</h1>
             <table className="table-auto text-center">
                 <thead className="border-b-1 border-gray-900 divide-x-3 divide-dashed">
                     <tr className="text-sm text-blue-900">
