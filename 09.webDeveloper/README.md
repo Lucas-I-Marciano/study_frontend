@@ -1,6 +1,6 @@
 ## Learning React
 
-
+![kanban](https://github.com/user-attachments/assets/b9ae6fff-42f4-490a-a050-6ee961467b8d)
 
 In week 9, I began my journey into **React.js**. My focus was to understand the fundamentals of components, props, and styling with CSS. I started simple, building individual components like a button, and gradually composed a full Kanban-style app using reusable components and dynamic rendering.
 
