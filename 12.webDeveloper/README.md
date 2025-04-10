@@ -1,7 +1,10 @@
 # React Forms, Validations & Shopping Cart
 
-> 📹 **[My video title (It is in another machine)]**  
-> *(my video here)*
+> 📹 **[Shopping Cart Demonstration]**  
+>
+https://github.com/user-attachments/assets/11b1e8de-7acd-4a54-8f9f-a77179b51574
+
+
 
 ## 📌 Overview
 
