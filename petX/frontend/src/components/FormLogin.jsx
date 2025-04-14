@@ -33,6 +33,7 @@ export const FormLogin = () => {
                 <label htmlFor="password" className="flex flex-col font-semibold text-sm pb-8 relative">Password
                     <input type="password" {...register("password")} placeholder="Password" className="border border-gray-600 rounded-sm p-1.5" />
                     <span className="absolute bottom-3 left-0 text-red-500">{errors.password?.message}</span>
+                    <Link className="absolute top-0 right-0 text-principal" to="/forgot-password">Forgot Password?</Link>
                 </label>
                 <button type="submit" className="p-2 bg-principal rounded-sm text-white font-semibold">Login</button>
             </form>
