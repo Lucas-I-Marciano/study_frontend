@@ -7,7 +7,7 @@ import images from "../assets"
 export const HomeLogin = () => {
     return (
         <>
-            <Header login_back={images.login_back} icon={images.login_paw} />
+            <Header message="Comece agora. Conecte-se já." login_back={images.login_back} icon={images.login_paw} />
             <FormLogin />
             <Footer icon={images.login_paw_footer} textFooter="PETWITTER" />
         </>

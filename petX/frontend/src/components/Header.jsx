@@ -1,4 +1,4 @@
-export const Header = ({ login_back, icon }) => {
+export const Header = ({ login_back, icon, message }) => {
     return (
         <div className={`bg-black-100`}>
             <div>
@@ -7,8 +7,7 @@ export const Header = ({ login_back, icon }) => {
             </div>
             <div className="px-5 pt-10 pb-5 font-[Open_Sans] text-4xl font-bold">
                 <img src={icon} className="py-bottom-5" alt="" />
-                <p className="text-white pt-10">Comece agora.</p>
-                <p className="text-white">Conecte-se já.</p>
+                <p className="text-white pt-10">{message}</p>
             </div>
 
         </div>
