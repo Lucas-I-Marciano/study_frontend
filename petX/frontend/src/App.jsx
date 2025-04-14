@@ -17,7 +17,10 @@ function App() {
 
       </div>
       <div className="form bg-white h-20 w-full"> FORM</div>
-      <div className="form bg-white h-20 w-full"> Footer</div>
+      <div className="form bg-white flex w-full items-center gap-5 justify-center">
+        <img src={images.login_paw_footer} alt="" />
+        <span className="text-principal font-bold text-xl font-[Poppins]">PETWITTER</span>
+      </div>
 
     </>
   )
