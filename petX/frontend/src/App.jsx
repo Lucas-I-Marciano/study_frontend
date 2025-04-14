@@ -1,6 +1,26 @@
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+
+const schema = yup
+  .object({
+    email: yup.string().email("Must be a valid email").required(),
+    password: yup.string().required("Password is required"),
+  })
+  .required()
+
 import images from "./assets"
 
 function App() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+
+  const onSubmit = (data) => console.log(data)
 
   return (
     <>
@@ -16,8 +36,23 @@ function App() {
         </div>
 
       </div>
-      <div className="form bg-white h-20 w-full"> FORM</div>
-      <div className="form bg-white flex w-full items-center gap-5 justify-center">
+      <div className="form bg-white w-full px-5 pt-8 pb-16">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
+          <label htmlFor="email" className="flex flex-col">E-mail
+          <input type="text" {...register("email")} placeholder="E-mail" />
+          <span>{errors.email?.message}</span>
+          </label>
+          <label htmlFor="password" className="flex flex-col">Password
+            <input type="password" {...register("password")} placeholder="Password" />
+            <span>{errors.password?.message}</span>
+          </label>
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account?</p>
+        <p>Sign Up Now</p>
+      </div>
+      <div className="bg-white flex w-full items-center gap-5 justify-center">
         <img src={images.login_paw_footer} alt="" />
         <span className="text-principal font-bold text-xl font-[Poppins]">PETWITTER</span>
       </div>
