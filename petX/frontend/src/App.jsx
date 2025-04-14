@@ -38,7 +38,7 @@ function App() {
       </div>
       <div className="form bg-white w-full px-5 pt-8 pb-16 font-[Open_Sans]">
         <h2 className="text-2xl font-semibold pb-8">Login</h2>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col pb-8">
           <label htmlFor="email" className="flex flex-col font-semibold text-sm pb-8 relative">E-mail
             <input type="text" {...register("email")} placeholder="E-mail" className="border border-gray-600 rounded-sm py-1.5" />
             <span className="absolute bottom-4 left-0">{errors.email?.message}</span>
@@ -47,7 +47,7 @@ function App() {
             <input type="password" {...register("password")} placeholder="Password" className="border border-gray-600 rounded-sm py-1.5" />
             <span className="absolute bottom-4 left-0">{errors.password?.message}</span>
           </label>
-          <button type="submit">Login</button>
+          <button type="submit" className="p-2 bg-principal rounded-sm text-white font-semibold">Login</button>
         </form>
         <p>Don't have an account?</p>
         <p>Sign Up Now</p>
