@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 
+import { Link } from "react-router";
+
 const schema = yup
     .object({
         email: yup.string().email("Must be a valid email").required("Must be a valid email"),
@@ -9,7 +11,7 @@ const schema = yup
     })
     .required()
 
-export const FormLogin = ({ signUpLink }) => {
+export const FormLogin = () => {
     const {
         register,
         handleSubmit,
@@ -35,7 +37,7 @@ export const FormLogin = ({ signUpLink }) => {
                 <button type="submit" className="p-2 bg-principal rounded-sm text-white font-semibold">Login</button>
             </form>
             <p className="text-gray-700 text-base/8">Don't have an account?</p>
-            <a href={signUpLink} className="text-principal underline">Sign Up Now</a>
+            <Link className="text-principal underline" to="/register">Sign Up Now</Link>
         </div>
     )
 }

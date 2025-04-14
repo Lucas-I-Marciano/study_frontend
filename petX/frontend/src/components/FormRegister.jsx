@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 
+import { Link } from "react-router";
+
 const schema = yup
     .object({
         name: yup.string().required("Name is required"),
@@ -11,7 +13,7 @@ const schema = yup
     })
     .required()
 
-export const FormRegister = ({ signUpLink }) => {
+export const FormRegister = () => {
     const {
         register,
         handleSubmit,
@@ -46,7 +48,7 @@ export const FormRegister = ({ signUpLink }) => {
                 <button type="submit" className="p-2 bg-principal rounded-sm text-white font-semibold">Login</button>
             </form>
             <p className="text-gray-700 text-base/8">Have an account?</p>
-            <a href={signUpLink} className="text-principal underline">Sign In Now</a>
+            <Link className="text-principal underline" to="/">Sign in Now</Link>
         </div>
     )
 }
