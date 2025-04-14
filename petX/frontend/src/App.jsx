@@ -36,16 +36,16 @@ function App() {
         </div>
 
       </div>
-      <div className="form bg-white w-full px-5 pt-8 pb-16">
-        <h2>Login</h2>
+      <div className="form bg-white w-full px-5 pt-8 pb-16 font-[Open_Sans]">
+        <h2 className="text-2xl font-semibold pb-8">Login</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
-          <label htmlFor="email" className="flex flex-col">E-mail
-          <input type="text" {...register("email")} placeholder="E-mail" />
-          <span>{errors.email?.message}</span>
+          <label htmlFor="email" className="flex flex-col font-semibold text-sm pb-8 relative">E-mail
+            <input type="text" {...register("email")} placeholder="E-mail" className="border border-gray-600 rounded-sm py-1.5" />
+            <span className="absolute bottom-4 left-0">{errors.email?.message}</span>
           </label>
-          <label htmlFor="password" className="flex flex-col">Password
-            <input type="password" {...register("password")} placeholder="Password" />
-            <span>{errors.password?.message}</span>
+          <label htmlFor="password" className="flex flex-col font-semibold text-sm pb-8 relative">Password
+            <input type="password" {...register("password")} placeholder="Password" className="border border-gray-600 rounded-sm py-1.5" />
+            <span className="absolute bottom-4 left-0">{errors.password?.message}</span>
           </label>
           <button type="submit">Login</button>
         </form>
