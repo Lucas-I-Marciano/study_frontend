@@ -40,12 +40,12 @@ function App() {
         <h2 className="text-2xl font-semibold pb-8">Login</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col pb-8">
           <label htmlFor="email" className="flex flex-col font-semibold text-sm pb-8 relative">E-mail
-            <input type="text" {...register("email")} placeholder="E-mail" className="border border-gray-600 rounded-sm py-1.5" />
-            <span className="absolute bottom-4 left-0">{errors.email?.message}</span>
+            <input type="text" {...register("email")} placeholder="E-mail" className="border border-gray-600 rounded-sm p-1.5" />
+            <span className="absolute bottom-3 left-0 text-red-500">{errors.email?.message}</span>
           </label>
           <label htmlFor="password" className="flex flex-col font-semibold text-sm pb-8 relative">Password
-            <input type="password" {...register("password")} placeholder="Password" className="border border-gray-600 rounded-sm py-1.5" />
-            <span className="absolute bottom-4 left-0">{errors.password?.message}</span>
+            <input type="password" {...register("password")} placeholder="Password" className="border border-gray-600 rounded-sm p-1.5" />
+            <span className="absolute bottom-3 left-0 text-red-500">{errors.password?.message}</span>
           </label>
           <button type="submit" className="p-2 bg-principal rounded-sm text-white font-semibold">Login</button>
         </form>
