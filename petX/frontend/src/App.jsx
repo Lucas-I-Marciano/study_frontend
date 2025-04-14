@@ -10,6 +10,7 @@ const schema = yup
   .required()
 
 import images from "./assets"
+import { Header } from "./components/Header"
 
 function App() {
   const {
@@ -24,18 +25,7 @@ function App() {
 
   return (
     <>
-      <div className={`bg-black-100`}>
-        <div>
-          <img src={images.login_back} className="bg-black absolute -top-35 -z-2" alt="" />
-          <div className="bg-black h-full w-full absolute opacity-60 -top-60 -z-1"></div>
-        </div>
-        <div className="px-5 pt-10 pb-5 font-[Open_Sans] text-4xl font-bold">
-          <img src={images.login_paw} className="py-bottom-5" alt="" />
-          <p className="text-white pt-10">Comece agora.</p>
-          <p className="text-white">Conecte-se já.</p>
-        </div>
-
-      </div>
+      <Header login_back={images.login_back} icon={images.login_paw} />
       <div className="form bg-white w-full px-5 pt-8 pb-16 font-[Open_Sans]">
         <h2 className="text-2xl font-semibold pb-8">Login</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col pb-8">
