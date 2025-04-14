@@ -49,10 +49,10 @@ function App() {
           </label>
           <button type="submit" className="p-2 bg-principal rounded-sm text-white font-semibold">Login</button>
         </form>
-        <p>Don't have an account?</p>
-        <p>Sign Up Now</p>
+        <p className="text-gray-700 text-base/8">Don't have an account?</p>
+        <a href="#" className="text-principal underline">Sign Up Now</a>
       </div>
-      <div className="bg-white flex w-full items-center gap-5 justify-center">
+      <div className="bg-white flex w-full items-center gap-5 justify-center pb-8">
         <img src={images.login_paw_footer} alt="" />
         <span className="text-principal font-bold text-xl font-[Poppins]">PETWITTER</span>
       </div>
