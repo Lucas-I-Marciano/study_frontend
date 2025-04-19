@@ -1,15 +1,20 @@
-import images from "./assets"
-import { Header } from "./components/Header"
-import { FormLogin } from "./components/FormLogin"
-import { Footer } from "./components/Footer"
+import { HomeLogin } from "./pages/HomeLogin"
+import { Register } from "./pages/Register"
+import { ForgotPassword } from "./pages/ForgotPassword"
+
+import { Routes, Route } from "react-router";
+import { ResetPassword } from "./pages/ResetPassword";
+
 
 function App() {
   return (
     <>
-      <Header login_back={images.login_back} icon={images.login_paw} />
-      <FormLogin />
-      <Footer icon={images.login_paw_footer} textFooter="PETWITTER" />
-
+      <Routes>
+        <Route path="/" element={<HomeLogin />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+      </Routes>
     </>
   )
 }
