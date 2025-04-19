@@ -3,6 +3,7 @@ import { Register } from "./pages/Register"
 import { ForgotPassword } from "./pages/ForgotPassword"
 
 import { Routes, Route } from "react-router";
+import { ResetPassword } from "./pages/ResetPassword";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<HomeLogin />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
     </>
   )
