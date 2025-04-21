@@ -15,10 +15,8 @@ export const Feed = () => {
                     postTimeAgo={`${index * 10}s`}
                     publication="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas veritatis excepturi doloremque temporibus necessitatibus debitis eveniet libero magni reiciendis facilis delectus culpa velit sit odit cumque voluptate, aliquid eligendi. Quos!"
                 />
-
             })}
-
-
+            <button className="bg-cyan-400 rounded-full text-white text-6xl w-14 h-14 text-center fixed right-4 bottom-4">+</button>
         </>
     )
 }
