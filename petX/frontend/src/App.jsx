@@ -4,6 +4,7 @@ import { ForgotPassword } from "./pages/ForgotPassword"
 
 import { Routes, Route } from "react-router";
 import { ResetPassword } from "./pages/ResetPassword";
+import { Feed } from "./pages/Feed";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/feed" element={<Feed />} />
       </Routes>
     </>
   )
